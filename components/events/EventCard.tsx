@@ -74,7 +74,7 @@ export function EventCard({
           {event.resume}
         </p>
 
-        <dl className="mt-auto flex flex-col gap-1.5 font-mono text-xs text-petrole/82">
+        <dl className="mt-auto flex flex-col gap-1.5 font-mono text-xs text-petrole/80">
           <div className="flex items-center gap-2">
             <dt className="sr-only">Date et heure</dt>
             <Clock className="size-3.5 shrink-0 text-terracotta" aria-hidden="true" />

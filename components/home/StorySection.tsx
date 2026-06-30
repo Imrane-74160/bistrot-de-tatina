@@ -36,7 +36,7 @@ export function StorySection() {
               titleClassName="text-creme"
             />
             {story.paragraphes.map((p, i) => (
-              <p key={i} className="text-pretty text-lg leading-relaxed text-creme/92">
+              <p key={i} className="text-pretty text-lg leading-relaxed text-creme/90">
                 {p}
               </p>
             ))}

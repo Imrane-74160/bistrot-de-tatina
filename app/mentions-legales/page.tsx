@@ -90,7 +90,7 @@ export default function MentionsLegalesPage() {
             affichage peut déposer des cookies tiers gérés par Google.
           </p>
 
-          <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/62">
+          <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/60">
             TODO : faire valider ces mentions par l'association (RNA/SIRET,
             hébergeur, durées de conservation).
           </p>

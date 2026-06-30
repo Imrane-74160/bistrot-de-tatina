@@ -65,7 +65,7 @@ export default function AProposPage() {
               vient comme on est : pour une bière locale, une planche à partager,
               une partie de cartes, un concert ou juste pour refaire le monde.
             </p>
-            <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/62">
+            <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/60">
               TODO : récit complet de la famille à confirmer.
             </p>
           </div>
@@ -82,14 +82,14 @@ export default function AProposPage() {
           <h2 className="text-balance text-4xl text-creme sm:text-5xl lg:text-6xl">
             Boire un verre qui a du sens
           </h2>
-          <p className="mt-6 text-pretty text-lg leading-relaxed text-creme/92">
+          <p className="mt-6 text-pretty text-lg leading-relaxed text-creme/90">
             Le Bistrot de Tatina est une association <strong className="text-creme">à but non
             lucratif</strong>. Ici, on ne cherche pas le profit : tous les bénéfices
             sont reversés à la <strong className="text-creme">lutte locale contre le
             cancer</strong> — associations, hôpitaux, recherche et aide aux malades,
             notamment autour du cancer des ovaires.
           </p>
-          <p className="mt-4 text-pretty text-lg leading-relaxed text-creme/92">
+          <p className="mt-4 text-pretty text-lg leading-relaxed text-creme/90">
             Faire la fête fait le bien. La moindre voix compte, et chaque soirée
             partagée fait avancer une cause qui nous tient à cœur.
           </p>
@@ -132,14 +132,14 @@ export default function AProposPage() {
                   {annee.annee}
                 </span>
                 <p className="text-pretty text-petrole/85">{annee.faitMarquant}</p>
-                <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/62">
+                <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/60">
                   Reversé : {annee.reverse} · Adhérents : {annee.adherents}
                 </p>
               </Reveal>
             </li>
           ))}
         </ol>
-        <p className="mt-6 text-center font-mono text-[0.7rem] uppercase tracking-wider text-petrole/62">
+        <p className="mt-6 text-center font-mono text-[0.7rem] uppercase tracking-wider text-petrole/60">
           TODO : chiffres réels par année à fournir par l'association.
         </p>
       </Section>
@@ -158,13 +158,13 @@ export default function AProposPage() {
               as="h2"
               titleClassName="text-creme"
             />
-            <p className="text-pretty text-lg leading-relaxed text-creme/92">
+            <p className="text-pretty text-lg leading-relaxed text-creme/90">
               Un bar associatif repose sur l'adhésion : c'est ce qui nous permet
               d'exister légalement et de reverser nos bénéfices à la cause.
               Adhérer, c'est rejoindre une communauté et soutenir directement la
               lutte contre le cancer.
             </p>
-            <ul className="flex flex-col gap-3 text-creme/92">
+            <ul className="flex flex-col gap-3 text-creme/90">
               <li className="flex items-start gap-3">
                 <Users className="mt-0.5 size-5 shrink-0 text-jaune" aria-hidden="true" />
                 Faire partie d'un lieu de vie solidaire et familial.

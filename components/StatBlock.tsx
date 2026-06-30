@@ -29,7 +29,7 @@ export function StatBlock({
       <div
         className={cn(
           'font-mono text-xs font-bold uppercase tracking-[0.16em]',
-          tone === 'light' ? 'text-creme/90' : 'text-petrole/82',
+          tone === 'light' ? 'text-creme/90' : 'text-petrole/80',
         )}
       >
         {label}

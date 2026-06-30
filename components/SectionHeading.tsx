@@ -59,7 +59,7 @@ export function SectionHeading({
         <div
           className={cn(
             'mt-5 max-w-prose text-pretty text-base leading-relaxed sm:mt-6',
-            tone === 'light' ? 'text-creme/92' : 'text-petrole/85',
+            tone === 'light' ? 'text-creme/90' : 'text-petrole/85',
             align === 'center' && 'mx-auto',
           )}
         >

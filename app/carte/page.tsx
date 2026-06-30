@@ -44,7 +44,7 @@ export default function CartePage() {
 
           <div className="mt-12 rounded-card bg-petrole p-8 text-center text-creme">
             <h2 className="text-3xl text-jaune sm:text-4xl">Un plat unique vous attend</h2>
-            <p className="mx-auto mt-3 max-w-xl text-creme/92">
+            <p className="mx-auto mt-3 max-w-xl text-creme/90">
               Les soirs d'événement, on cuisine un plat unique fait maison.
               Découvrez-le dans l'agenda.
             </p>
@@ -55,7 +55,7 @@ export default function CartePage() {
             </div>
           </div>
 
-          <p className="mt-8 text-center font-mono text-[0.7rem] uppercase tracking-wider text-petrole/62">
+          <p className="mt-8 text-center font-mono text-[0.7rem] uppercase tracking-wider text-petrole/60">
             TODO : carte & prix réels à confirmer par l'association.
           </p>
         </div>

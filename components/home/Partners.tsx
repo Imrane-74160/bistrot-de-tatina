@@ -38,7 +38,7 @@ export function Partners() {
           </Reveal>
         </div>
 
-        <p className="mt-8 text-center font-mono text-[0.7rem] uppercase tracking-wider text-petrole/62">
+        <p className="mt-8 text-center font-mono text-[0.7rem] uppercase tracking-wider text-petrole/60">
           TODO : noms réels & logos à fournir par l'association.
         </p>
       </div>

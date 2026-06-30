@@ -18,7 +18,7 @@ export function Footer() {
               de Tatina
             </span>
           </div>
-          <p className="text-sm leading-relaxed text-creme/88">
+          <p className="text-sm leading-relaxed text-creme/90">
             Bistrot associatif et solidaire à Meythet. On boit un verre, on
             partage un moment — et tous les bénéfices vont à la lutte locale
             contre le cancer.
@@ -143,7 +143,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-creme/10">
-        <div className="container-bistrot flex flex-col items-center justify-between gap-2 py-6 text-center text-xs text-creme/82 sm:flex-row sm:text-left">
+        <div className="container-bistrot flex flex-col items-center justify-between gap-2 py-6 text-center text-xs text-creme/85 sm:flex-row sm:text-left">
           <p>
             © {new Date().getFullYear()} {site.nom} — Association à but non
             lucratif.

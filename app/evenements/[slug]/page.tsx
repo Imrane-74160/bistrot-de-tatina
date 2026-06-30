@@ -111,7 +111,7 @@ export default function EvenementPage({
                   <li className="flex items-start gap-3">
                     <UtensilsCrossed className="mt-0.5 size-5 shrink-0 text-jaune" aria-hidden="true" />
                     <span>
-                      <span className="font-mono text-xs uppercase tracking-wider text-creme/82">
+                      <span className="font-mono text-xs uppercase tracking-wider text-creme/85">
                         Plat unique
                       </span>
                       <br />
