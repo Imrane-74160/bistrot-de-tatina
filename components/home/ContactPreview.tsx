@@ -14,7 +14,7 @@ export function ContactPreview() {
       <div className="container-bistrot py-16 sm:py-20 lg:py-24">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Infos */}
-          <div className="flex flex-col gap-6 lg:max-w-xl">
+          <div className="flex flex-col gap-8 lg:max-w-xl">
             <SectionHeading
               id="contact-titre"
               eyebrow={contact.eyebrow}
@@ -49,7 +49,7 @@ export function ContactPreview() {
             </div>
 
             {/* Adresse + téléphone */}
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 size-5 shrink-0 text-terracotta" aria-hidden="true" />
                 <span className="text-lg">{adresseLigne} (Annecy)</span>
