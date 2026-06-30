@@ -3,14 +3,19 @@ import { Button } from '@/components/Button';
 import { SectionHeading } from '@/components/SectionHeading';
 import { OverlapCard } from '@/components/OverlapCard';
 import { Reveal } from '@/components/Reveal';
+import { Spotlight } from '@/components/Spotlight';
 import { homeContent } from '@/lib/content';
 
 /** « Notre histoire » (§4.6) — section pétrole sombre, photo + texte. */
 export function StorySection() {
   const { story } = homeContent;
   return (
-    <section className="bg-petrole text-creme" aria-labelledby="story-titre">
-      <div className="container-bistrot py-16 sm:py-20 lg:py-28">
+    <section
+      className="relative bg-petrole text-creme"
+      aria-labelledby="story-titre"
+    >
+      <Spotlight />
+      <div className="container-bistrot relative z-10 py-16 sm:py-20 lg:py-28">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <Reveal variant="zoom" className="order-1">
             <OverlapCard className="ring-1 ring-creme/10">

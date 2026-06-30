@@ -250,6 +250,84 @@ html.lenis body {
   }
 }
 
+/* ── Cartes en relief 3D (suivent le curseur) + reflet ──────────────────────── */
+.tatina-tilt {
+  transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tatina-tilt-glare {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 255, 255, 0.35),
+    transparent 45%
+  );
+  mix-blend-mode: soft-light;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.tatina-tilt:hover {
+  transition: transform 0.12s ease-out;
+}
+.tatina-tilt:hover .tatina-tilt-glare {
+  opacity: 1;
+}
+
+/* ── Halo lumineux qui suit la souris (sections sombres) ─────────────────────── */
+.tatina-spot {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    600px circle at var(--sx, 50%) var(--sy, 50%),
+    rgba(242, 183, 5, 0.14),
+    transparent 60%
+  );
+  transition: opacity 0.5s ease;
+}
+.tatina-spot--on {
+  opacity: 1;
+}
+
+/* ── Soulignement de nav animé (desktop) ────────────────────────────────────── */
+.tatina-navlink::after {
+  content: '';
+  position: absolute;
+  left: 0.25rem;
+  right: 0.25rem;
+  bottom: 0.35rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tatina-navlink:hover::after,
+.tatina-navlink:focus-visible::after {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tatina-tilt {
+    transform: none !important;
+    transition: none !important;
+  }
+  .tatina-tilt-glare,
+  .tatina-spot {
+    display: none;
+  }
+  .tatina-navlink::after {
+    transition: none;
+  }
+}
+
 /* ── Bandeau « mot répété » (PhotoBandTabs) ─────────────────────────────────── */
 .tatina-marquee {
   animation: tatina-marquee 22s linear infinite;

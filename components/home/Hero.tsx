@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ArrowDown } from 'lucide-react';
 import { RoundIconButton } from '@/components/RoundIconButton';
+import { Magnetic } from '@/components/Magnetic';
 import { homeContent } from '@/lib/content';
 
 /**
@@ -51,14 +52,16 @@ export function Hero() {
 
           {/* Flèche de défilement, bas-gauche */}
           <div className="absolute bottom-6 left-6">
-            <RoundIconButton
-              href="#intro"
-              variant="jaune"
-              size="lg"
-              aria-label="Faire défiler vers le contenu"
-            >
-              <ArrowDown aria-hidden="true" />
-            </RoundIconButton>
+            <Magnetic strength={0.5}>
+              <RoundIconButton
+                href="#intro"
+                variant="jaune"
+                size="lg"
+                aria-label="Faire défiler vers le contenu"
+              >
+                <ArrowDown aria-hidden="true" />
+              </RoundIconButton>
+            </Magnetic>
           </div>
         </div>
       </div>

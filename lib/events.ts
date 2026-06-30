@@ -4,6 +4,10 @@ import matter from 'gray-matter';
 import { marked } from 'marked';
 import type { Evenement, EvenementMeta } from '@/types';
 
+// Ré-export des helpers de date (pures, client-safe) pour conserver les imports
+// existants `from '@/lib/events'` côté serveur.
+export { formatDateFr, formatDateShort } from '@/lib/dates';
+
 const EVENTS_DIR = path.join(process.cwd(), 'content', 'evenements');
 
 marked.setOptions({ gfm: true, breaks: false });
@@ -82,30 +86,4 @@ export function getEvent(
   const ev = readAll().find((e) => e.slug === slug);
   if (!ev) return null;
   return { ...ev, html: marked.parse(ev.contenu) as string };
-}
-
-/** Date lisible en français (ex. « jeudi 3 juillet 2026 »). */
-export function formatDateFr(iso: string): string {
-  if (!iso) return '';
-  try {
-    return new Intl.DateTimeFormat('fr-FR', {
-      weekday: 'long',
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-    }).format(new Date(iso));
-  } catch {
-    return iso;
-  }
-}
-
-/** Date courte (ex. « 3 juil. »). */
-export function formatDateShort(iso: string): { jour: string; mois: string } {
-  const d = new Date(iso);
-  return {
-    jour: new Intl.DateTimeFormat('fr-FR', { day: '2-digit' }).format(d),
-    mois: new Intl.DateTimeFormat('fr-FR', { month: 'short' })
-      .format(d)
-      .replace('.', ''),
-  };
 }

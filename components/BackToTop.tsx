@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowUp } from 'lucide-react';
 import { RoundIconButton } from '@/components/RoundIconButton';
+import { Magnetic } from '@/components/Magnetic';
 
 /** Bouton rond « retour en haut » (§3.3) — apparaît après défilement. */
 export function BackToTop() {
@@ -26,13 +27,15 @@ export function BackToTop() {
         visible ? 'opacity-100' : 'pointer-events-none opacity-0'
       }`}
     >
-      <RoundIconButton
-        variant="petrole"
-        aria-label="Revenir en haut de la page"
-        onClick={toTop}
-      >
-        <ArrowUp aria-hidden="true" />
-      </RoundIconButton>
+      <Magnetic strength={0.4}>
+        <RoundIconButton
+          variant="petrole"
+          aria-label="Revenir en haut de la page"
+          onClick={toTop}
+        >
+          <ArrowUp aria-hidden="true" />
+        </RoundIconButton>
+      </Magnetic>
     </div>
   );
 }

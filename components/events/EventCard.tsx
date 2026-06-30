@@ -1,12 +1,15 @@
+'use client';
+
+import { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Clock, MapPin, UtensilsCrossed, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/Badge';
-import { formatDateShort, formatDateFr } from '@/lib/events';
+import { formatDateShort, formatDateFr } from '@/lib/dates';
 import type { EvenementMeta } from '@/types';
 import { cn } from '@/lib/utils';
 
-/** Carte événement (agenda + accueil). */
+/** Carte événement avec relief 3D au survol (suit le curseur) + reflet. */
 export function EventCard({
   event,
   className,
@@ -17,10 +20,34 @@ export function EventCard({
   past?: boolean;
 }) {
   const { jour, mois } = formatDateShort(event.date);
+  const ref = useRef<HTMLElement>(null);
+
+  const onMove = (e: React.MouseEvent) => {
+    const el = ref.current;
+    if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+      return;
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width;
+    const py = (e.clientY - r.top) / r.height;
+    el.style.setProperty('--rx', `${(0.5 - py) * 9}deg`);
+    el.style.setProperty('--ry', `${(px - 0.5) * 9}deg`);
+    el.style.setProperty('--mx', `${px * 100}%`);
+    el.style.setProperty('--my', `${py * 100}%`);
+  };
+  const onLeave = () => {
+    const el = ref.current;
+    if (!el) return;
+    el.style.setProperty('--rx', '0deg');
+    el.style.setProperty('--ry', '0deg');
+  };
+
   return (
     <article
+      ref={ref}
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
       className={cn(
-        'group relative flex flex-col overflow-hidden rounded-card bg-creme shadow-card ring-1 ring-petrole/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-overlap',
+        'tatina-tilt group relative flex flex-col overflow-hidden rounded-card bg-creme shadow-card ring-1 ring-petrole/10 transition-shadow duration-300 hover:shadow-overlap',
         past && 'opacity-90',
         className,
       )}
@@ -36,12 +63,10 @@ export function EventCard({
             past && 'grayscale-[0.3]',
           )}
         />
-        {/* Reflet qui balaie au survol */}
         <span
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
         />
-        {/* Pastille date */}
         <div className="absolute left-4 top-4 flex h-16 w-16 flex-col items-center justify-center rounded-2xl bg-jaune text-petrole shadow-card">
           <span className="font-display text-3xl leading-none">{jour}</span>
           <span className="font-mono text-[0.65rem] font-bold uppercase tracking-wider">
@@ -104,6 +129,9 @@ export function EventCard({
           />
         </span>
       </div>
+
+      {/* Reflet qui suit le curseur (relief 3D) */}
+      <span aria-hidden="true" className="tatina-tilt-glare" />
     </article>
   );
 }
