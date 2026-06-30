@@ -78,33 +78,35 @@ export function PageHero({
             onMouseLeave={onLeave}
             className="relative overflow-hidden rounded-card shadow-overlap"
           >
-            <div className="relative aspect-[16/10] w-full sm:aspect-[21/9] lg:aspect-[21/8]">
-              <div className="hero-parallax">
-                <Image
-                  src={image}
-                  alt={imageAlt}
-                  fill
-                  priority
-                  sizes="(max-width: 1680px) 100vw, 1680px"
-                  className="object-cover"
-                />
-              </div>
-              {/* Assombrissement pétrole : quasi opaque en bas (texte) + fort à gauche, image visible en haut */}
-              <div
-                className="absolute inset-0 bg-[linear-gradient(to_top,rgba(35,61,57,0.99),rgba(35,61,57,0.94)_24%,rgba(35,61,57,0.62)_50%,rgba(35,61,57,0.25)_78%,rgba(35,61,57,0.05))]"
-                aria-hidden="true"
+            {/* Image de fond : couvre toute la carte (la hauteur est imposée par
+                le contenu, pas par un ratio fixe → padding haut/bas constant) */}
+            <div className="hero-parallax">
+              <Image
+                src={image}
+                alt={imageAlt}
+                fill
+                priority
+                sizes="(max-width: 1680px) 100vw, 1680px"
+                className="object-cover"
               />
-              <div
-                className="absolute inset-0 bg-[linear-gradient(to_right,rgba(35,61,57,0.72),rgba(35,61,57,0.1)_55%,transparent_75%)]"
-                aria-hidden="true"
-              />
-              {/* Balayage de lumière unique à l'ouverture */}
-              <span className="hero-sheen" aria-hidden="true" />
             </div>
-            <div className="absolute inset-0 z-10 flex flex-col p-6 sm:p-10 lg:p-12">
+            {/* Assombrissement : fort à gauche (texte) + léger voile vertical */}
+            <div
+              className="absolute inset-0 bg-[linear-gradient(to_right,rgba(35,61,57,0.95),rgba(35,61,57,0.74)_44%,rgba(35,61,57,0.38)_74%,rgba(35,61,57,0.14))]"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute inset-0 bg-[linear-gradient(to_top,rgba(35,61,57,0.55),rgba(35,61,57,0.1)_55%,rgba(35,61,57,0.2))]"
+              aria-hidden="true"
+            />
+            {/* Balayage de lumière unique à l'ouverture */}
+            <span className="hero-sheen" aria-hidden="true" />
+
+            {/* Contenu en flux : impose la hauteur, marge interne haut/bas identique */}
+            <div className="relative z-10 flex flex-col p-6 sm:p-10 lg:p-14">
               {/* Fil d'Ariane masqué sur mobile (gain de place) */}
-              <div className="hidden sm:block">{Breadcrumb}</div>
-              <div className="mt-auto max-w-3xl">
+              <div className="mb-6 hidden sm:block">{Breadcrumb}</div>
+              <div className="max-w-3xl">
                 {eyebrow && (
                   <p className="mb-2 font-mono text-xs font-bold uppercase tracking-[0.22em] text-jaune sm:text-sm">
                     {eyebrow}
