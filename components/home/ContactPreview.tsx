@@ -22,17 +22,7 @@ export function ContactPreview() {
               as="h2"
             />
             <p className="max-w-prose text-pretty text-lg leading-relaxed text-petrole/85">
-              {(() => {
-                const i = contact.texte.indexOf('? ');
-                if (i === -1) return contact.texte;
-                return (
-                  <>
-                    {contact.texte.slice(0, i + 1)}
-                    <br />
-                    {contact.texte.slice(i + 2)}
-                  </>
-                );
-              })()}
+              {contact.texte}
             </p>
 
             {/* Horaires mis en avant */}
