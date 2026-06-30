@@ -22,7 +22,7 @@ export function Hero() {
               fill
               priority
               sizes="(max-width: 1680px) 100vw, 1680px"
-              className="object-cover object-[28%_center]"
+              className="tatina-kenburns object-cover object-[28%_center]"
             />
             {/* Dégradés : sombre en bas (titre) + à droite (lisibilité), container jaune préservé à gauche */}
             <div
@@ -42,11 +42,13 @@ export function Hero() {
               className="font-display uppercase leading-[0.82] text-creme drop-shadow-[0_2px_14px_rgba(0,0,0,0.6)]"
             >
               {hero.titre.map((ligne, i) => (
-                <span
-                  key={i}
-                  className="block text-[clamp(2.75rem,12vw,14rem)]"
-                >
-                  {ligne}
+                <span key={i} className="block overflow-hidden pb-[0.06em]">
+                  <span
+                    className="tatina-rise block text-[clamp(2.75rem,12vw,14rem)]"
+                    style={{ animationDelay: `${0.2 + i * 0.13}s` }}
+                  >
+                    {ligne}
+                  </span>
                 </span>
               ))}
             </h1>

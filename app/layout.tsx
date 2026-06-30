@@ -4,6 +4,8 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { StickyCallButton } from '@/components/layout/StickyCallButton';
 import { BackToTop } from '@/components/BackToTop';
+import { SmoothScroll } from '@/components/SmoothScroll';
+import { ScrollProgress } from '@/components/ScrollProgress';
 import { localBusinessJsonLd } from '@/lib/seo';
 import { site, SITE_URL } from '@/lib/site';
 import './globals.css';
@@ -65,6 +67,8 @@ export default function RootLayout({
         <a href="#contenu" className="skip-link">
           Aller au contenu
         </a>
+        <SmoothScroll />
+        <ScrollProgress />
         <Header />
         <main id="contenu">{children}</main>
         <Footer />

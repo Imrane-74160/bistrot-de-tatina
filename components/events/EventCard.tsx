@@ -20,7 +20,7 @@ export function EventCard({
   return (
     <article
       className={cn(
-        'group relative flex flex-col overflow-hidden rounded-card bg-creme shadow-card ring-1 ring-petrole/10 transition-transform duration-200 hover:-translate-y-1',
+        'group relative flex flex-col overflow-hidden rounded-card bg-creme shadow-card ring-1 ring-petrole/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-overlap',
         past && 'opacity-90',
         className,
       )}
@@ -32,9 +32,14 @@ export function EventCard({
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className={cn(
-            'object-cover transition-transform duration-500 group-hover:scale-105',
+            'object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110',
             past && 'grayscale-[0.3]',
           )}
+        />
+        {/* Reflet qui balaie au survol */}
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
         />
         {/* Pastille date */}
         <div className="absolute left-4 top-4 flex h-16 w-16 flex-col items-center justify-center rounded-2xl bg-jaune text-petrole shadow-card">

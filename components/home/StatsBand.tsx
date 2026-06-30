@@ -1,5 +1,6 @@
 import { Sparkles } from 'lucide-react';
 import { Reveal } from '@/components/Reveal';
+import { CountUp } from '@/components/CountUp';
 import { chiffresContent } from '@/lib/content';
 
 /**
@@ -30,7 +31,14 @@ export function StatsBand() {
               className="flex flex-col items-center gap-1"
             >
               <dd className="font-display text-6xl leading-none sm:text-7xl">
-                {stat.valeur}
+                {(() => {
+                  const n = Number(stat.valeur);
+                  return stat.valeur.trim() !== '' && Number.isFinite(n) ? (
+                    <CountUp value={n} />
+                  ) : (
+                    stat.valeur
+                  );
+                })()}
                 {stat.suffixe && (
                   <span className="text-4xl text-terracotta sm:text-5xl">
                     {stat.suffixe}
