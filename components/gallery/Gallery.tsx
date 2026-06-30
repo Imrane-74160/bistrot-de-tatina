@@ -5,6 +5,7 @@ import Image from 'next/image';
 import * as Dialog from '@radix-ui/react-dialog';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Tilt } from '@/components/Tilt';
 import { galerieContent } from '@/lib/content';
 
 type Photo = { src: string; alt: string; categorie: string };
@@ -71,20 +72,22 @@ export function Gallery() {
       <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         {visible.map((photo, i) => (
           <li key={photo.src}>
-            <button
-              type="button"
-              onClick={() => setOpenIndex(i)}
-              className="group relative block aspect-square w-full overflow-hidden rounded-2xl ring-1 ring-petrole/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
-              aria-label={`Agrandir : ${photo.alt}`}
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-            </button>
+            <Tilt max={10} className="overflow-hidden rounded-2xl ring-1 ring-petrole/10">
+              <button
+                type="button"
+                onClick={() => setOpenIndex(i)}
+                className="group relative block aspect-square w-full overflow-hidden rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
+                aria-label={`Agrandir : ${photo.alt}`}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </button>
+            </Tilt>
           </li>
         ))}
       </ul>

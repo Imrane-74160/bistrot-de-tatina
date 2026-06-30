@@ -250,6 +250,73 @@ html.lenis body {
   }
 }
 
+/* ── Hero cinématique : parallaxe souris + révélation du titre par balayage ──── */
+.hero-parallax {
+  position: absolute;
+  inset: 0;
+  transform: scale(1.06) translate3d(
+      calc(var(--px, 0) * 1.3%),
+      calc(var(--py, 0) * 1.3%),
+      0
+    );
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Révélation ligne par ligne : balayage du haut vers le bas + légère montée.
+   Aucune incidence sur la mise en page (clip-path/transform), et l'état final
+   ne masque rien (inset négatif) → titre parfaitement net une fois révélé. */
+.hero-line-inner {
+  display: block;
+  animation: hero-line-reveal 1.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes hero-line-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.42em);
+    clip-path: inset(0 0 102% 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(-0.32em -0.32em -0.32em -0.32em);
+  }
+}
+
+/* Balayage de lumière unique à l'ouverture */
+.hero-sheen {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 42%,
+    rgba(244, 239, 225, 0.16) 50%,
+    transparent 58%
+  );
+  transform: translateX(-130%);
+  animation: hero-sheen 2.6s ease-out 0.35s both;
+}
+@keyframes hero-sheen {
+  to {
+    transform: translateX(130%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-parallax {
+    transform: scale(1.04) !important;
+    transition: none !important;
+  }
+  .hero-line-inner {
+    animation: none !important;
+  }
+  .hero-sheen {
+    display: none !important;
+  }
+}
+
 /* ── Cartes en relief 3D (suivent le curseur) + reflet ──────────────────────── */
 .tatina-tilt {
   transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));

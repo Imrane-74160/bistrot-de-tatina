@@ -3,6 +3,7 @@ import { ArrowRight, Camera } from 'lucide-react';
 import { Button } from '@/components/Button';
 import { SectionHeading } from '@/components/SectionHeading';
 import { Reveal } from '@/components/Reveal';
+import { Tilt } from '@/components/Tilt';
 import { homeContent } from '@/lib/content';
 
 /** Aperçu de la galerie (§ aperçu page Galerie) — grille de photos vers /galerie. */
@@ -38,8 +39,9 @@ export function GalleryPreview() {
                 i === 0 ? 'col-span-2 row-span-2 md:col-span-2 md:row-span-2' : ''
               }
             >
-              <div
-                className={`relative w-full overflow-hidden rounded-card ring-1 ring-creme/10 ${
+              <Tilt
+                max={9}
+                className={`w-full overflow-hidden rounded-card ring-1 ring-creme/10 ${
                   i === 0 ? 'aspect-square md:aspect-auto md:h-full' : 'aspect-square'
                 }`}
               >
@@ -50,7 +52,7 @@ export function GalleryPreview() {
                   sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 hover:scale-105"
                 />
-              </div>
+              </Tilt>
             </li>
           ))}
           </ul>

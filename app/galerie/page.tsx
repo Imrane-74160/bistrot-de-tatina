@@ -2,8 +2,6 @@ import type { Metadata } from 'next';
 import { PageHero } from '@/components/PageHero';
 import { Section } from '@/components/Section';
 import { Gallery } from '@/components/gallery/Gallery';
-import { InstagramFeed } from '@/components/InstagramFeed';
-import { SectionHeading } from '@/components/SectionHeading';
 import { JsonLd } from '@/components/JsonLd';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 
@@ -34,16 +32,6 @@ export default function GaleriePage() {
 
       <Section tone="creme" spacing="lg">
         <Gallery />
-      </Section>
-
-      <Section tone="creme" spacing="md" className="border-t border-petrole/10">
-        <SectionHeading
-          eyebrow="En ce moment"
-          title="Sur Instagram"
-          as="h2"
-          className="mb-8"
-        />
-        <InstagramFeed />
       </Section>
     </>
   );

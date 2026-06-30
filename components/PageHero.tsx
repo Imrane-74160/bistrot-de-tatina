@@ -1,11 +1,14 @@
+'use client';
+
+import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 /**
- * En-tête de page interne. Avec image : carte arrondie + overlay + titre.
- * Sans image : bandeau pétrole. Inclut un fil d'Ariane discret.
+ * En-tête de page interne. Avec image : carte arrondie + parallaxe souris +
+ * overlay + titre révélé. Sans image : bandeau pétrole. Fil d'Ariane discret.
  */
 export function PageHero({
   eyebrow,
@@ -23,6 +26,25 @@ export function PageHero({
   /** Libellé de la page courante (fil d'Ariane). */
   current: string;
 }) {
+  const stageRef = useRef<HTMLDivElement>(null);
+
+  const onMove = (e: React.MouseEvent) => {
+    const el = stageRef.current;
+    if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+      return;
+    const r = el.getBoundingClientRect();
+    const px = ((e.clientX - r.left) / r.width - 0.5) * 2;
+    const py = ((e.clientY - r.top) / r.height - 0.5) * 2;
+    el.style.setProperty('--px', px.toFixed(3));
+    el.style.setProperty('--py', py.toFixed(3));
+  };
+  const onLeave = () => {
+    const el = stageRef.current;
+    if (!el) return;
+    el.style.setProperty('--px', '0');
+    el.style.setProperty('--py', '0');
+  };
+
   const Breadcrumb = (
     <nav aria-label="Fil d'Ariane">
       <ol
@@ -50,16 +72,23 @@ export function PageHero({
     return (
       <section className="bg-creme pt-4 sm:pt-6">
         <div className="container-bistrot">
-          <div className="relative overflow-hidden rounded-card shadow-overlap">
+          <div
+            ref={stageRef}
+            onMouseMove={onMove}
+            onMouseLeave={onLeave}
+            className="relative overflow-hidden rounded-card shadow-overlap"
+          >
             <div className="relative aspect-[16/10] w-full sm:aspect-[21/9] lg:aspect-[21/8]">
-              <Image
-                src={image}
-                alt={imageAlt}
-                fill
-                priority
-                sizes="(max-width: 1680px) 100vw, 1680px"
-                className="object-cover"
-              />
+              <div className="hero-parallax">
+                <Image
+                  src={image}
+                  alt={imageAlt}
+                  fill
+                  priority
+                  sizes="(max-width: 1680px) 100vw, 1680px"
+                  className="object-cover"
+                />
+              </div>
               {/* Assombrissement pétrole : quasi opaque en bas (texte) + fort à gauche, image visible en haut */}
               <div
                 className="absolute inset-0 bg-[linear-gradient(to_top,rgba(35,61,57,0.99),rgba(35,61,57,0.94)_24%,rgba(35,61,57,0.62)_50%,rgba(35,61,57,0.25)_78%,rgba(35,61,57,0.05))]"
@@ -69,8 +98,10 @@ export function PageHero({
                 className="absolute inset-0 bg-[linear-gradient(to_right,rgba(35,61,57,0.72),rgba(35,61,57,0.1)_55%,transparent_75%)]"
                 aria-hidden="true"
               />
+              {/* Balayage de lumière unique à l'ouverture */}
+              <span className="hero-sheen" aria-hidden="true" />
             </div>
-            <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-10 lg:p-12">
+            <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 sm:p-10 lg:p-12">
               {Breadcrumb}
               <div className="max-w-3xl">
                 {eyebrow && (
@@ -79,7 +110,7 @@ export function PageHero({
                   </p>
                 )}
                 <h1 className="text-balance text-5xl text-creme drop-shadow-[0_2px_16px_rgba(0,0,0,0.6)] sm:text-6xl lg:text-7xl">
-                  {title}
+                  <span className="hero-line-inner">{title}</span>
                 </h1>
                 {intro && (
                   <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-creme/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.5)] sm:text-lg">
