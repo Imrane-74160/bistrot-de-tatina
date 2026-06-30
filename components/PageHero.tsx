@@ -101,15 +101,16 @@ export function PageHero({
               {/* Balayage de lumière unique à l'ouverture */}
               <span className="hero-sheen" aria-hidden="true" />
             </div>
-            <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 sm:p-10 lg:p-12">
-              {Breadcrumb}
-              <div className="max-w-3xl">
+            <div className="absolute inset-0 z-10 flex flex-col p-6 sm:p-10 lg:p-12">
+              {/* Fil d'Ariane masqué sur mobile (gain de place) */}
+              <div className="hidden sm:block">{Breadcrumb}</div>
+              <div className="mt-auto max-w-3xl">
                 {eyebrow && (
                   <p className="mb-2 font-mono text-xs font-bold uppercase tracking-[0.22em] text-jaune sm:text-sm">
                     {eyebrow}
                   </p>
                 )}
-                <h1 className="text-balance text-5xl text-creme drop-shadow-[0_2px_16px_rgba(0,0,0,0.6)] sm:text-6xl lg:text-7xl">
+                <h1 className="text-balance text-4xl text-creme drop-shadow-[0_2px_16px_rgba(0,0,0,0.6)] sm:text-6xl lg:text-7xl">
                   <span className="hero-line-inner">{title}</span>
                 </h1>
                 {intro && (
@@ -128,13 +129,14 @@ export function PageHero({
   return (
     <section className="bg-petrole text-creme">
       <div className="container-bistrot py-12 sm:py-16 lg:py-20">
-        <div className="mb-6">{Breadcrumb}</div>
+        {/* Fil d'Ariane masqué sur mobile (gain de place) */}
+        <div className="mb-6 hidden sm:block">{Breadcrumb}</div>
         {eyebrow && (
           <p className="mb-2 font-mono text-xs font-bold uppercase tracking-[0.22em] text-jaune sm:text-sm">
             {eyebrow}
           </p>
         )}
-        <h1 className="text-balance text-5xl sm:text-6xl lg:text-7xl">{title}</h1>
+        <h1 className="text-balance text-4xl sm:text-6xl lg:text-7xl">{title}</h1>
         {intro && (
           <p className="mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-creme/90">
             {intro}
