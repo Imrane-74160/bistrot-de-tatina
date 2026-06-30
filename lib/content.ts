@@ -3,10 +3,19 @@ import chiffres from '@/content/chiffres.json';
 import partenaires from '@/content/partenaires.json';
 import home from '@/content/home.json';
 import galerie from '@/content/galerie.json';
+import faq from '@/content/faq.json';
 import type { Chiffre, Partenaire, RubriqueCarte } from '@/types';
 
 /** Contenu éditable de la page d'accueil. */
 export const homeContent = home;
+
+/** Questions fréquentes (FAQ + balisage FAQPage). */
+export const faqContent = {
+  eyebrow: faq.eyebrow,
+  titre: faq.titre,
+  intro: faq.intro,
+  questions: faq.questions as { question: string; reponse: string }[],
+};
 
 /** Carte (restauration + boissons). */
 export const carteContent = {

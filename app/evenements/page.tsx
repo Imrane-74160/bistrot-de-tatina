@@ -42,7 +42,13 @@ export default function EvenementsPage() {
           title="Prochains rendez-vous"
           as="h2"
           className="mb-10"
-        />
+        >
+          Toute l'année, on fait vivre le bistrot avec des concerts, des blind
+          tests, des soirées à thème et des marchés de producteurs. Si vous
+          cherchez quoi faire le soir à Annecy ou une bonne adresse pour sortir
+          en Haute-Savoie, jetez un œil à l'agenda : il y a presque toujours
+          quelque chose qui se prépare derrière la porte jaune de Meythet.
+        </SectionHeading>
         {upcoming.length > 0 ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {upcoming.map((event) => (

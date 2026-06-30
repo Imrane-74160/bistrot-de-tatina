@@ -38,6 +38,25 @@ export function buildMetadata({
   };
 }
 
+/**
+ * Communes & zones desservies autour d'Annecy (référencement local).
+ * Meythet, Cran-Gevrier, Annecy-le-Vieux, Pringy et Seynod forment, avec
+ * Annecy, la commune nouvelle depuis 2017 ; les autres sont limitrophes.
+ */
+const ZONES_DESSERVIES = [
+  { '@type': 'City', name: 'Annecy' },
+  { '@type': 'City', name: 'Meythet' },
+  { '@type': 'City', name: 'Cran-Gevrier' },
+  { '@type': 'City', name: 'Annecy-le-Vieux' },
+  { '@type': 'City', name: 'Seynod' },
+  { '@type': 'City', name: 'Pringy' },
+  { '@type': 'City', name: 'Épagny Metz-Tessy' },
+  { '@type': 'City', name: 'Poisy' },
+  { '@type': 'City', name: 'Argonay' },
+  { '@type': 'AdministrativeArea', name: 'Grand Annecy' },
+  { '@type': 'AdministrativeArea', name: 'Haute-Savoie' },
+];
+
 /** JSON-LD LocalBusiness (BarOrPub) — affiché sur toutes les pages. */
 export function localBusinessJsonLd() {
   return {
@@ -45,6 +64,7 @@ export function localBusinessJsonLd() {
     '@type': 'BarOrPub',
     '@id': `${SITE_URL}/#bistrot`,
     name: site.nom,
+    alternateName: 'Bistrot de Tatina — bar associatif à Annecy',
     slogan: site.baseline,
     description: site.description,
     url: SITE_URL,
@@ -67,6 +87,27 @@ export function localBusinessJsonLd() {
       latitude: site.geo.lat,
       longitude: site.geo.lng,
     },
+    areaServed: ZONES_DESSERVIES,
+    servesCuisine: [
+      'Bar à bières artisanales',
+      'Planches & charcuterie à partager',
+      'Cuisine de bistrot maison',
+      'Produits locaux de Haute-Savoie',
+    ],
+    amenityFeature: [
+      { '@type': 'LocationFeatureSpecification', name: 'Cour extérieure', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Concerts & soirées à thème', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Bières & producteurs locaux', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Privatisation possible', value: true },
+    ],
+    maximumAttendeeCapacity: 130,
+    paymentAccepted: 'Espèces, Carte bancaire',
+    currenciesAccepted: 'EUR',
+    publicAccess: true,
+    isAccessibleForFree: true,
+    keywords:
+      'bistrot associatif Annecy, bar associatif Meythet, bar solidaire Haute-Savoie, ' +
+      'bar à bières Annecy, concerts Annecy, sortir à Annecy, lutte contre le cancer',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -76,8 +117,28 @@ export function localBusinessJsonLd() {
       },
     ],
     sameAs: [site.reseaux.instagram, site.reseaux.facebook].filter(Boolean),
-    knowsAbout: 'Association solidaire — lutte contre le cancer',
+    knowsAbout: [
+      'Bistrot associatif et solidaire',
+      'Lutte locale contre le cancer',
+      'Vie locale à Annecy et en Haute-Savoie',
+    ],
     hasMap: `https://www.google.com/maps?q=${encodeURIComponent(adresseLigne)}`,
+  };
+}
+
+/** JSON-LD FAQPage — questions fréquentes (référencement local). */
+export function faqJsonLd(items: { question: string; reponse: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.reponse,
+      },
+    })),
   };
 }
 

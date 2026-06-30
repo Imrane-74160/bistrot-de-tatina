@@ -1,0 +1,40 @@
+{
+  "_comment": "Questions fréquentes — affichées sur l'accueil + balisées en FAQPage (SEO local Annecy). Éditable sans toucher au code.",
+  "eyebrow": "Bon à savoir",
+  "titre": "Questions fréquentes",
+  "intro": "Tout ce qu'il faut savoir avant de pousser la porte jaune de notre bistrot associatif à Annecy.",
+  "questions": [
+    {
+      "question": "Où se trouve Le Bistrot de Tatina à Annecy ?",
+      "reponse": "Le Bistrot de Tatina est installé au 2 allée des Morilles, à Meythet, commune déléguée d'Annecy (74960), en Haute-Savoie. On est facilement accessible depuis le centre d'Annecy, Cran-Gevrier, Annecy-le-Vieux, Seynod ou Épagny Metz-Tessy, à quelques minutes du lac d'Annecy. Repérez notre façade : un ancien atelier de chaudronnerie et sa porte jaune, notre signe de reconnaissance."
+    },
+    {
+      "question": "Quels sont les horaires d'ouverture ?",
+      "reponse": "On vous accueille le jeudi et le vendredi soir, dès 17h, et un peu plus souvent dès qu'il y a un événement (concert, blind test, marché de producteurs, soirée à thème). Le mieux est de consulter l'agenda en ligne ou notre Instagram pour ne rien rater."
+    },
+    {
+      "question": "Qu'est-ce qu'un bistrot associatif et solidaire ?",
+      "reponse": "C'est un vrai bar de quartier, porté par une association à but non lucratif. Concrètement, on boit un verre, on écoute de la musique, on partage une planche… et tous les bénéfices sont reversés à la lutte locale contre le cancer, à Annecy et en Haute-Savoie. Faire la fête fait du bien, ici au sens propre."
+    },
+    {
+      "question": "Faut-il adhérer pour venir boire un verre ?",
+      "reponse": "L'adhésion, simple et peu coûteuse, se fait sur place : c'est ce qui permet à l'association d'exister et de reverser ses bénéfices à la cause. Venez d'abord pousser la porte, on vous expliquera tout autour d'une bière locale."
+    },
+    {
+      "question": "Que propose la carte ?",
+      "reponse": "Une carte courte, locale et de saison : bières et boissons artisanales de Haute-Savoie, planches de charcuterie et de fromages à partager, grignotages maison, et un plat unique cuisiné les soirs d'événement. On privilégie au maximum les producteurs du bassin annécien."
+    },
+    {
+      "question": "Peut-on privatiser le lieu pour une soirée ?",
+      "reponse": "Oui. Avec sa grande salle et sa cour extérieure, le bistrot peut accueillir jusqu'à 120-130 personnes — idéal pour un anniversaire, un pot de départ ou une soirée associative près d'Annecy. Écrivez-nous via le formulaire de contact pour en parler."
+    },
+    {
+      "question": "Y a-t-il des concerts et des événements près d'Annecy ?",
+      "reponse": "Régulièrement : concerts, blind tests, marchés de producteurs, soirées à thème… Le Bistrot de Tatina est devenu un des lieux conviviaux où sortir le soir autour d'Annecy. Retrouvez tout le programme dans notre agenda."
+    },
+    {
+      "question": "Comment venir et où se garer ?",
+      "reponse": "On est à Meythet, au nord-ouest d'Annecy, bien desservi en voiture comme en bus. Du stationnement est disponible à proximité. Pour l'itinéraire le plus simple, utilisez le bouton « Itinéraire » de la page Contact."
+    }
+  ]
+}

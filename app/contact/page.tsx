@@ -46,6 +46,15 @@ export default function ContactPage() {
               <h2 className="text-4xl sm:text-5xl">Passez nous voir</h2>
             </div>
 
+            <p className="text-pretty text-lg leading-relaxed text-petrole/85">
+              Le Bistrot de Tatina vous accueille à Meythet, au nord-ouest
+              d'Annecy et à quelques minutes du lac, en Haute-Savoie. On est
+              facilement accessible depuis le centre d'Annecy, Cran-Gevrier,
+              Annecy-le-Vieux, Seynod ou Épagny Metz-Tessy, en voiture comme en
+              bus, avec du stationnement à proximité. Le plus simple pour nous
+              trouver : suivez la porte jaune, ou lancez l'itinéraire ci-dessous.
+            </p>
+
             <ul className="flex flex-col gap-5">
               <li className="flex items-start gap-4">
                 <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-petrole/5">

@@ -11,7 +11,8 @@
     "eyebrow": "Votre rendez-vous",
     "titreLignes": ["Bon temps,", "bon cœur"],
     "paragraphes": [
-      "Le Bistrot de Tatina, c'est un lieu de vie familial où l'on vient comme on est. On y partage une bière locale, une planche, une partie de cartes et beaucoup de bonne humeur.",
+      "Le Bistrot de Tatina, c'est un lieu de vie familial à Meythet, aux portes d'Annecy, où l'on vient comme on est. On y partage une bière locale, une planche de Haute-Savoie, une partie de cartes et beaucoup de bonne humeur.",
+      "À quelques minutes du lac d'Annecy, on a voulu un vrai bar de quartier : sans chichis, ouvert à tous, où voisins, copains et habitués du bassin annécien se croisent autour du comptoir.",
       "Ici, la fête fait le bien : l'association ne cherche pas le profit, elle le redistribue à la lutte locale contre le cancer. La moindre voix compte."
     ],
     "cta": "Découvrir le lieu"
@@ -20,8 +21,8 @@
     "eyebrow": "Notre histoire",
     "titre": "Né dans un atelier",
     "paragraphes": [
-      "Tout commence en 2022 dans un ancien atelier de chaudronnerie : containers, acier patiné, et une porte jaune devenue notre signe de reconnaissance.",
-      "Une histoire de famille, montée pierre par pierre, avec une idée simple : transformer un verre partagé en soutien concret pour ceux qui luttent contre le cancer."
+      "Tout commence en 2022 à Meythet, dans un ancien atelier de chaudronnerie : containers, acier patiné, et une porte jaune devenue notre signe de reconnaissance à Annecy.",
+      "Une histoire de famille, montée pierre par pierre, avec une idée simple : transformer un verre partagé en soutien concret pour celles et ceux qui luttent contre le cancer, ici en Haute-Savoie."
     ],
     "cta": "Lire notre histoire",
     "image": "/images/atelier-talina.jpg",
@@ -30,7 +31,7 @@
   "menu": {
     "eyebrow": "À boire & à grignoter",
     "titre": "La carte",
-    "texte": "Des bières et boissons locales, des planches à partager et un plat unique les soirs d'événement. Court, local, de saison.",
+    "texte": "Des bières et boissons artisanales de Haute-Savoie, des planches à partager et un plat unique fait maison les soirs d'événement. Une carte courte, locale et de saison, qui privilégie les producteurs du bassin annécien.",
     "cta": "Voir la carte",
     "images": [
       { "src": "/images/plat-grignotage.jpg", "alt": "Planche de charcuterie à partager et une bière" },
@@ -59,7 +60,7 @@
   "galerie": {
     "eyebrow": "En images",
     "titre": "La galerie",
-    "texte": "Le lieu, les soirées, la cour, les producteurs : un aperçu de l'ambiance qui vous attend.",
+    "texte": "Le lieu, les soirées, la cour, les concerts, les producteurs : un aperçu de l'ambiance qui vous attend dans notre bistrot associatif près d'Annecy.",
     "cta": "Voir toute la galerie",
     "images": [
       { "src": "/images/cour-pergola.jpg", "alt": "La cour et sa pergola végétalisée" },
@@ -73,7 +74,7 @@
   "contact": {
     "eyebrow": "Passez nous voir",
     "titre": "On vous attend",
-    "texte": "Une question, une envie de privatiser une soirée, ou juste l'adresse pour venir ? On vous répond avec plaisir.",
+    "texte": "Une question, une envie de privatiser une soirée à Annecy, ou juste l'adresse pour venir nous voir à Meythet ? On vous répond avec plaisir.",
     "image": "/images/cour-pompe.jpg",
     "imageAlt": "La cour du bistrot et sa pompe à essence vintage"
   }

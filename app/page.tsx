@@ -7,6 +7,7 @@ import { OfferIconStrip } from '@/components/home/OfferIconStrip';
 import { PhotoBandTabs } from '@/components/home/PhotoBandTabs';
 import { UpcomingEvents } from '@/components/home/UpcomingEvents';
 import { GalleryPreview } from '@/components/home/GalleryPreview';
+import { FaqSection } from '@/components/FaqSection';
 import { ContactPreview } from '@/components/home/ContactPreview';
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function HomePage() {
       {/* Bande photo + onglets */} <PhotoBandTabs />
       {/* Aperçu « Événements » */} <UpcomingEvents />
       {/* Aperçu « Galerie » */} <GalleryPreview />
+      {/* Questions fréquentes (SEO local) */} <FaqSection />
       {/* Aperçu « Contact » */} <ContactPreview />
     </>
   );

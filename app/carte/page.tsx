@@ -35,9 +35,19 @@ export default function CartePage() {
 
       <Section tone="creme" spacing="lg">
         <div className="mx-auto max-w-3xl">
-          <p className="mb-10 flex items-center gap-2 rounded-pill bg-sauge/10 px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.12em] text-petrole">
+          <p className="mb-6 flex items-center gap-2 rounded-pill bg-sauge/10 px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.12em] text-petrole">
             <Leaf className="size-4 text-sauge" aria-hidden="true" />
             Produits & boissons locales privilégiés
+          </p>
+
+          <p className="mb-10 text-pretty text-lg leading-relaxed text-petrole/85">
+            Au Bistrot de Tatina, on aime ce qui vient d'à côté. Nos bières et nos
+            boissons sont autant que possible artisanales et issues de brasseries
+            de Haute-Savoie, et nos planches de charcuterie et de fromages mettent
+            à l'honneur les producteurs du bassin annécien. La carte reste courte
+            et change au gré des saisons et des arrivages : c'est l'esprit d'un
+            vrai bistrot de quartier à Annecy, où l'on boit et grignote bien, sans
+            se ruiner, en soutenant les artisans du coin.
           </p>
 
           <MenuList rubriques={carteContent.rubriques} />

@@ -65,6 +65,13 @@ export default function AProposPage() {
               vient comme on est : pour une bière locale, une planche à partager,
               une partie de cartes, un concert ou juste pour refaire le monde.
             </p>
+            <p className="text-pretty text-lg leading-relaxed text-petrole/85">
+              Idéalement situé à Meythet, aux portes d'Annecy et à quelques
+              minutes du lac, le bistrot est vite devenu un point de ralliement
+              du bassin annécien : un endroit où se retrouver le jeudi et le
+              vendredi soir, à deux pas de Cran-Gevrier, d'Annecy-le-Vieux et de
+              Seynod, loin de l'agitation et tout près de chez soi.
+            </p>
             <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/60">
               TODO : récit complet de la famille à confirmer.
             </p>
@@ -91,7 +98,11 @@ export default function AProposPage() {
           </p>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-creme/90">
             Faire la fête fait le bien. La moindre voix compte, et chaque soirée
-            partagée fait avancer une cause qui nous tient à cœur.
+            partagée à Annecy fait avancer une cause qui nous tient à cœur. En
+            soutenant des associations, des hôpitaux et la recherche en
+            Haute-Savoie, on garde notre engagement local et transparent : l'argent
+            récolté au comptoir reste au service de celles et ceux qui en ont besoin,
+            ici, près de chez nous.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button href="/evenements" variant="jaune">
