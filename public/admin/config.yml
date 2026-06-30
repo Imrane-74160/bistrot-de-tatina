@@ -4,7 +4,7 @@
 
 backend:
   name: github
-  repo: VOTRE-COMPTE/bistrot-de-tatina # TODO : à remplacer par owner/repo GitHub
+  repo: Imrane-74160/bistrot-de-tatina # owner/repo GitHub
   branch: main
   base_url: https://bistrot-de-tatina.vercel.app # TODO : URL du site (routes OAuth /api/auth)
   auth_endpoint: api/auth
