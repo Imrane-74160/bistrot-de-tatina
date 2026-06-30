@@ -60,8 +60,13 @@ export function PageHero({
                 sizes="(max-width: 1680px) 100vw, 1680px"
                 className="object-cover"
               />
+              {/* Assombrissement pétrole : fort en bas (texte) + sur la gauche, image visible en haut */}
               <div
-                className="absolute inset-0 bg-[linear-gradient(to_top,rgba(35,61,57,0.92),rgba(35,61,57,0.45)_55%,rgba(35,61,57,0.25))]"
+                className="absolute inset-0 bg-[linear-gradient(to_top,rgba(35,61,57,0.96),rgba(35,61,57,0.62)_42%,rgba(35,61,57,0.28)_72%,rgba(35,61,57,0.12))]"
+                aria-hidden="true"
+              />
+              <div
+                className="absolute inset-0 bg-[linear-gradient(to_right,rgba(35,61,57,0.6),rgba(35,61,57,0)_60%)]"
                 aria-hidden="true"
               />
             </div>
@@ -73,11 +78,11 @@ export function PageHero({
                     {eyebrow}
                   </p>
                 )}
-                <h1 className="text-balance text-5xl text-creme drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-6xl lg:text-7xl">
+                <h1 className="text-balance text-5xl text-creme drop-shadow-[0_2px_16px_rgba(0,0,0,0.6)] sm:text-6xl lg:text-7xl">
                   {title}
                 </h1>
                 {intro && (
-                  <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-creme/90 sm:text-lg">
+                  <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-creme/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.5)] sm:text-lg">
                     {intro}
                   </p>
                 )}
