@@ -35,20 +35,15 @@ export function Hero() {
             />
           </div>
 
-          {/* Titre superposé, aligné à droite (l'enseigne reste visible à gauche) */}
+          {/* Titre superposé, en bas à droite (l'enseigne reste visible à gauche) */}
           <div className="absolute inset-0 flex flex-col items-end justify-end p-6 text-right sm:p-10 lg:p-14">
             <h1
               id="hero-titre"
               className="font-display uppercase leading-[0.82] text-creme drop-shadow-[0_2px_14px_rgba(0,0,0,0.6)]"
             >
               {hero.titre.map((ligne, i) => (
-                <span key={i} className="block overflow-hidden pb-[0.06em]">
-                  <span
-                    className="tatina-rise block text-[clamp(2.75rem,12vw,14rem)]"
-                    style={{ animationDelay: `${0.2 + i * 0.13}s` }}
-                  >
-                    {ligne}
-                  </span>
+                <span key={i} className="block text-[clamp(2.75rem,12vw,14rem)]">
+                  {ligne}
                 </span>
               ))}
             </h1>

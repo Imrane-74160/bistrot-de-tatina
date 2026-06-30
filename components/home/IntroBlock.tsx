@@ -11,9 +11,9 @@ import { homeContent } from '@/lib/content';
 export function IntroBlock() {
   const { intro } = homeContent;
   return (
-    <section id="intro" className="relative bg-creme pb-20 pt-16 sm:pt-20 lg:pb-24 lg:pt-24">
+    <section id="intro" className="relative bg-creme pb-28 pt-16 sm:pt-20 lg:pb-32 lg:pt-24">
       <div className="container-bistrot">
-        <div className="grid items-end gap-8 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-16">
           {/* Titre */}
           <Reveal>
             <p className="eyebrow mb-3">{intro.eyebrow}</p>
@@ -24,7 +24,7 @@ export function IntroBlock() {
           </Reveal>
 
           {/* Paragraphe + CTA */}
-          <Reveal delay={140} className="flex flex-col gap-5 lg:pb-3">
+          <Reveal delay={140} className="flex flex-col gap-5">
             {intro.paragraphes.map((p, i) => (
               <p
                 key={i}

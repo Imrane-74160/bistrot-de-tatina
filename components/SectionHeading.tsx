@@ -31,7 +31,7 @@ export function SectionHeading({
   return (
     <Reveal
       className={cn(
-        'flex flex-col gap-3',
+        'flex flex-col',
         align === 'center' && 'items-center text-center',
         className,
       )}
@@ -39,7 +39,7 @@ export function SectionHeading({
       {eyebrow && (
         <span
           className={cn(
-            'font-mono text-xs font-bold uppercase tracking-[0.25em]',
+            'mb-3 font-mono text-xs font-bold uppercase tracking-[0.25em]',
             tone === 'light' ? 'text-jaune' : 'text-terracotta',
           )}
         >
@@ -58,7 +58,7 @@ export function SectionHeading({
       {children && (
         <div
           className={cn(
-            'max-w-prose text-pretty text-base leading-relaxed',
+            'mt-5 max-w-prose text-pretty text-base leading-relaxed sm:mt-6',
             tone === 'light' ? 'text-creme/92' : 'text-petrole/85',
             align === 'center' && 'mx-auto',
           )}

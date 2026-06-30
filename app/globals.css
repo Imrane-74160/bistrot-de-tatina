@@ -216,15 +216,15 @@ html.lenis body {
 
 /* ── Hero cinématique : Ken Burns + révélation du titre ligne par ligne ──────── */
 .tatina-kenburns {
-  animation: tatina-kenburns 26s ease-in-out infinite alternate;
-  transform-origin: 30% 60%;
+  animation: tatina-kenburns 32s ease-in-out infinite alternate;
+  transform-origin: 35% 55%;
 }
 @keyframes tatina-kenburns {
   from {
-    transform: scale(1.04);
+    transform: scale(1.01);
   }
   to {
-    transform: scale(1.13);
+    transform: scale(1.06);
   }
 }
 .tatina-rise {
