@@ -22,7 +22,7 @@ export function MenuSection() {
               as="h2"
               titleClassName="text-creme"
             />
-            <p className="text-pretty text-lg leading-relaxed text-creme/85">
+            <p className="text-pretty text-lg leading-relaxed text-creme/92">
               {menu.texte}
             </p>
 

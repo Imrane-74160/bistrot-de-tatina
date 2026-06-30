@@ -42,7 +42,7 @@ export function ContactPreview() {
                   Horaires d'ouverture
                 </p>
                 <p className="mt-1 text-xl font-semibold">{site.horairesTexte}</p>
-                <p className="mt-1 font-mono text-[0.7rem] uppercase tracking-wider text-petrole/60">
+                <p className="mt-1 font-mono text-[0.7rem] uppercase tracking-wider text-petrole/78">
                   TODO : horaires à confirmer
                 </p>
               </div>

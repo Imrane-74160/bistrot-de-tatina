@@ -54,18 +54,18 @@ export default function AProposPage() {
           </OverlapCard>
           <div className="flex flex-col gap-5">
             <SectionHeading eyebrow="Depuis 2022" title="Né dans un atelier" as="h2" />
-            <p className="text-pretty text-lg leading-relaxed text-petrole/80">
+            <p className="text-pretty text-lg leading-relaxed text-petrole/85">
               Le Bistrot de Tatina a ouvert ses portes en 2022 dans un ancien
               atelier de chaudronnerie à Meythet. Containers, acier patiné,
               esthétique d'atelier… et une porte jaune devenue notre signe de
               reconnaissance.
             </p>
-            <p className="text-pretty text-lg leading-relaxed text-petrole/80">
+            <p className="text-pretty text-lg leading-relaxed text-petrole/85">
               C'est un lieu de vie familial, monté pierre par pierre, où l'on
               vient comme on est : pour une bière locale, une planche à partager,
               une partie de cartes, un concert ou juste pour refaire le monde.
             </p>
-            <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/50">
+            <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/62">
               TODO : récit complet de la famille à confirmer.
             </p>
           </div>
@@ -82,14 +82,14 @@ export default function AProposPage() {
           <h2 className="text-balance text-4xl text-creme sm:text-5xl lg:text-6xl">
             Boire un verre qui a du sens
           </h2>
-          <p className="mt-6 text-pretty text-lg leading-relaxed text-creme/85">
+          <p className="mt-6 text-pretty text-lg leading-relaxed text-creme/92">
             Le Bistrot de Tatina est une association <strong className="text-creme">à but non
             lucratif</strong>. Ici, on ne cherche pas le profit : tous les bénéfices
             sont reversés à la <strong className="text-creme">lutte locale contre le
             cancer</strong> — associations, hôpitaux, recherche et aide aux malades,
             notamment autour du cancer des ovaires.
           </p>
-          <p className="mt-4 text-pretty text-lg leading-relaxed text-creme/85">
+          <p className="mt-4 text-pretty text-lg leading-relaxed text-creme/92">
             Faire la fête fait le bien. La moindre voix compte, et chaque soirée
             partagée fait avancer une cause qui nous tient à cœur.
           </p>
@@ -131,15 +131,15 @@ export default function AProposPage() {
                 <span className="font-display text-5xl text-terracotta">
                   {annee.annee}
                 </span>
-                <p className="text-pretty text-petrole/80">{annee.faitMarquant}</p>
-                <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/50">
+                <p className="text-pretty text-petrole/85">{annee.faitMarquant}</p>
+                <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/62">
                   Reversé : {annee.reverse} · Adhérents : {annee.adherents}
                 </p>
               </Reveal>
             </li>
           ))}
         </ol>
-        <p className="mt-6 text-center font-mono text-[0.7rem] uppercase tracking-wider text-petrole/50">
+        <p className="mt-6 text-center font-mono text-[0.7rem] uppercase tracking-wider text-petrole/62">
           TODO : chiffres réels par année à fournir par l'association.
         </p>
       </Section>
@@ -158,13 +158,13 @@ export default function AProposPage() {
               as="h2"
               titleClassName="text-creme"
             />
-            <p className="text-pretty text-lg leading-relaxed text-creme/85">
+            <p className="text-pretty text-lg leading-relaxed text-creme/92">
               Un bar associatif repose sur l'adhésion : c'est ce qui nous permet
               d'exister légalement et de reverser nos bénéfices à la cause.
               Adhérer, c'est rejoindre une communauté et soutenir directement la
               lutte contre le cancer.
             </p>
-            <ul className="flex flex-col gap-3 text-creme/85">
+            <ul className="flex flex-col gap-3 text-creme/92">
               <li className="flex items-start gap-3">
                 <Users className="mt-0.5 size-5 shrink-0 text-jaune" aria-hidden="true" />
                 Faire partie d'un lieu de vie solidaire et familial.
@@ -174,7 +174,7 @@ export default function AProposPage() {
                 Soutenir concrètement la cause à chaque visite.
               </li>
             </ul>
-            <p className="text-creme/70">
+            <p className="text-creme/90">
               L'adhésion se fait simplement sur place. Une question ? Écrivez-nous.
             </p>
             <div>

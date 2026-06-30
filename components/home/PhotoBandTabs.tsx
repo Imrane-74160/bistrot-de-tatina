@@ -41,7 +41,7 @@ export function PhotoBandTabs() {
                   aria-hidden="true"
                 >
                   {photoband.mot}
-                  <Beer className="size-6 text-creme/80 sm:size-8" />
+                  <Beer className="size-6 text-creme/90 sm:size-8" />
                 </span>
               ))}
             </div>

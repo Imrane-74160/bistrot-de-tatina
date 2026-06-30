@@ -15,7 +15,7 @@ export function Label({
   return (
     <label
       htmlFor={htmlFor}
-      className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-petrole/80"
+      className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-petrole/85"
     >
       {children}
       {required && (

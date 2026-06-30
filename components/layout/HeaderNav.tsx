@@ -24,7 +24,7 @@ export function HeaderNav() {
         aria-current={active ? 'page' : undefined}
         className={cn(
           'relative inline-flex min-h-[44px] items-center whitespace-nowrap rounded-pill px-1 font-mono text-[1.05rem] font-bold uppercase tracking-[0.06em] transition-colors',
-          active ? 'text-terracotta' : 'text-petrole/80 hover:text-petrole',
+          active ? 'text-terracotta' : 'text-petrole/85 hover:text-petrole',
         )}
       >
         {link.label}

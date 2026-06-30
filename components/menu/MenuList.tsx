@@ -17,7 +17,7 @@ export function MenuList({ rubriques }: { rubriques: RubriqueCarte[] }) {
               {rubrique.titre}
             </h2>
             {rubrique.note && (
-              <p className="mt-2 text-pretty text-petrole/70">{rubrique.note}</p>
+              <p className="mt-2 text-pretty text-petrole/82">{rubrique.note}</p>
             )}
           </div>
 
@@ -40,7 +40,7 @@ export function MenuList({ rubriques }: { rubriques: RubriqueCarte[] }) {
                     )}
                   </div>
                   {article.description && (
-                    <p className="mt-0.5 text-sm text-petrole/65">
+                    <p className="mt-0.5 text-sm text-petrole/80">
                       {article.description}
                     </p>
                   )}

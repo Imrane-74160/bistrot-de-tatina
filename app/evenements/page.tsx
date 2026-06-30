@@ -52,7 +52,7 @@ export default function EvenementsPage() {
         ) : (
           <div className="flex flex-col items-center gap-4 rounded-card border border-petrole/12 bg-petrole/5 py-16 text-center">
             <CalendarDays className="size-10 text-terracotta" aria-hidden="true" />
-            <p className="max-w-md text-pretty text-petrole/75">
+            <p className="max-w-md text-pretty text-petrole/85">
               Le prochain programme se prépare. Suivez-nous sur Instagram pour ne
               rien rater !
             </p>
@@ -75,7 +75,7 @@ export default function EvenementsPage() {
               <EventCard key={event.slug} event={event} past />
             ))}
           </div>
-          <p className="mt-8 flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-creme/50">
+          <p className="mt-8 flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-creme/80">
             <History className="size-4" aria-hidden="true" />
             Archive des soirées passées
           </p>

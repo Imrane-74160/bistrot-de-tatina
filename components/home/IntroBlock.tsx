@@ -28,7 +28,7 @@ export function IntroBlock() {
             {intro.paragraphes.map((p, i) => (
               <p
                 key={i}
-                className="text-pretty text-lg leading-relaxed text-petrole/80"
+                className="text-pretty text-lg leading-relaxed text-petrole/85"
               >
                 {p}
               </p>

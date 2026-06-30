@@ -70,11 +70,11 @@ export function EventCard({
           </Link>
         </h3>
 
-        <p className="line-clamp-3 text-sm leading-relaxed text-petrole/75">
+        <p className="line-clamp-3 text-sm leading-relaxed text-petrole/85">
           {event.resume}
         </p>
 
-        <dl className="mt-auto flex flex-col gap-1.5 font-mono text-xs text-petrole/70">
+        <dl className="mt-auto flex flex-col gap-1.5 font-mono text-xs text-petrole/82">
           <div className="flex items-center gap-2">
             <dt className="sr-only">Date et heure</dt>
             <Clock className="size-3.5 shrink-0 text-terracotta" aria-hidden="true" />

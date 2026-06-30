@@ -112,7 +112,7 @@ export function Gallery() {
                     className="rounded-card object-contain"
                   />
                 </div>
-                <figcaption className="mt-4 text-center font-mono text-xs uppercase tracking-[0.14em] text-creme/80">
+                <figcaption className="mt-4 text-center font-mono text-xs uppercase tracking-[0.14em] text-creme/90">
                   {current.alt} · {(openIndex ?? 0) + 1}/{visible.length}
                 </figcaption>
               </figure>

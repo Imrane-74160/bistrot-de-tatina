@@ -101,7 +101,7 @@ export function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label className="flex items-start gap-3 text-sm text-petrole/80">
+        <label className="flex items-start gap-3 text-sm text-petrole/85">
           <input
             type="checkbox"
             name="rgpd"

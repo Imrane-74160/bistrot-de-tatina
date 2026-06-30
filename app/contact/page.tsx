@@ -52,7 +52,7 @@ export default function ContactPage() {
                   <MapPin className="size-5 text-terracotta" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-petrole/60">
+                  <p className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-petrole/78">
                     Adresse
                   </p>
                   <p className="text-lg">{adresseLigne} (Annecy)</p>
@@ -63,11 +63,11 @@ export default function ContactPage() {
                   <Clock className="size-5 text-terracotta" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-petrole/60">
+                  <p className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-petrole/78">
                     Horaires
                   </p>
                   <p className="text-lg">{site.horairesTexte}</p>
-                  <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/50">
+                  <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/62">
                     TODO : à confirmer
                   </p>
                 </div>
@@ -77,7 +77,7 @@ export default function ContactPage() {
                   <Phone className="size-5 text-terracotta" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-petrole/60">
+                  <p className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-petrole/78">
                     Téléphone
                   </p>
                   <a href={`tel:${site.telephoneE164}`} className="text-lg transition-colors hover:text-terracotta">
@@ -90,7 +90,7 @@ export default function ContactPage() {
                   <Mail className="size-5 text-terracotta" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-petrole/60">
+                  <p className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-petrole/78">
                     E-mail
                   </p>
                   <a href={`mailto:${site.email}`} className="text-lg transition-colors hover:text-terracotta">
@@ -140,7 +140,7 @@ export default function ContactPage() {
           {/* Formulaire */}
           <div className="rounded-card bg-petrole/[0.03] p-6 ring-1 ring-petrole/10 sm:p-8">
             <h2 className="mb-2 text-4xl sm:text-5xl">Écrivez-nous</h2>
-            <p className="mb-6 text-petrole/70">
+            <p className="mb-6 text-petrole/82">
               On vous répond aussi vite qu'une mousse bien tirée.
             </p>
             <ContactForm />

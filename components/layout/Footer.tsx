@@ -18,7 +18,7 @@ export function Footer() {
               de Tatina
             </span>
           </div>
-          <p className="text-sm leading-relaxed text-creme/75">
+          <p className="text-sm leading-relaxed text-creme/88">
             Bistrot associatif et solidaire à Meythet. On boit un verre, on
             partage un moment — et tous les bénéfices vont à la lutte locale
             contre le cancer.
@@ -50,7 +50,7 @@ export function Footer() {
           <h2 className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-jaune">
             Le site
           </h2>
-          <ul className="flex flex-col gap-2.5 text-sm text-creme/80">
+          <ul className="flex flex-col gap-2.5 text-sm text-creme/90">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
@@ -80,7 +80,7 @@ export function Footer() {
           <h2 className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-jaune">
             Nous trouver
           </h2>
-          <address className="flex flex-col gap-3 text-sm not-italic text-creme/80">
+          <address className="flex flex-col gap-3 text-sm not-italic text-creme/90">
             <a
               href={itineraireUrl}
               target="_blank"
@@ -113,7 +113,7 @@ export function Footer() {
           <h2 className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-jaune">
             Infos légales
           </h2>
-          <ul className="flex flex-col gap-2.5 text-sm text-creme/80">
+          <ul className="flex flex-col gap-2.5 text-sm text-creme/90">
             <li>
               <Link
                 href="/mentions-legales"
@@ -143,7 +143,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-creme/10">
-        <div className="container-bistrot flex flex-col items-center justify-between gap-2 py-6 text-center text-xs text-creme/60 sm:flex-row sm:text-left">
+        <div className="container-bistrot flex flex-col items-center justify-between gap-2 py-6 text-center text-xs text-creme/82 sm:flex-row sm:text-left">
           <p>
             © {new Date().getFullYear()} {site.nom} — Association à but non
             lucratif.

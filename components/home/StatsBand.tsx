@@ -16,7 +16,7 @@ export function StatsBand() {
           <Sparkles className="size-5 shrink-0 text-terracotta" aria-hidden="true" />
           <h2
             id="stats-titre"
-            className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-petrole/80"
+            className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-petrole/85"
           >
             {accroche}
           </h2>
@@ -45,14 +45,14 @@ export function StatsBand() {
                   </span>
                 )}
               </dd>
-              <dt className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-petrole/75">
+              <dt className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-petrole/85">
                 {stat.label}
               </dt>
             </Reveal>
           ))}
         </dl>
 
-        <p className="mt-10 font-mono text-[0.7rem] uppercase tracking-wider text-petrole/60">
+        <p className="mt-10 font-mono text-[0.7rem] uppercase tracking-wider text-petrole/78">
           TODO : chiffres à confirmer avec l'association.
         </p>
       </div>

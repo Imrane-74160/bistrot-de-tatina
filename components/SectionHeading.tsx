@@ -59,7 +59,7 @@ export function SectionHeading({
         <div
           className={cn(
             'max-w-prose text-pretty text-base leading-relaxed',
-            tone === 'light' ? 'text-creme/90' : 'text-petrole/85',
+            tone === 'light' ? 'text-creme/92' : 'text-petrole/85',
             align === 'center' && 'mx-auto',
           )}
         >

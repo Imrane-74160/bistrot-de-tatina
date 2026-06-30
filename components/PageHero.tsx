@@ -28,7 +28,7 @@ export function PageHero({
       <ol
         className={cn(
           'flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.14em]',
-          image ? 'text-creme/80' : 'text-creme/70',
+          image ? 'text-creme/90' : 'text-creme/90',
         )}
       >
         <li>
@@ -82,7 +82,7 @@ export function PageHero({
                   {title}
                 </h1>
                 {intro && (
-                  <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-creme/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.5)] sm:text-lg">
+                  <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-creme/92 [text-shadow:0_1px_8px_rgba(0,0,0,0.5)] sm:text-lg">
                     {intro}
                   </p>
                 )}
@@ -105,7 +105,7 @@ export function PageHero({
         )}
         <h1 className="text-balance text-5xl sm:text-6xl lg:text-7xl">{title}</h1>
         {intro && (
-          <p className="mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-creme/85">
+          <p className="mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-creme/92">
             {intro}
           </p>
         )}

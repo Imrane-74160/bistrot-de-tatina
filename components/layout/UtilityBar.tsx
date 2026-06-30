@@ -12,7 +12,7 @@ export function UtilityBar() {
             href={site.reseaux.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full text-creme/85 transition-colors hover:text-jaune focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jaune"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full text-creme/92 transition-colors hover:text-jaune focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jaune"
             aria-label="Instagram (nouvel onglet)"
           >
             <Instagram className="size-4" aria-hidden="true" />
@@ -21,7 +21,7 @@ export function UtilityBar() {
             href={site.reseaux.facebook}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full text-creme/85 transition-colors hover:text-jaune focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jaune"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full text-creme/92 transition-colors hover:text-jaune focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jaune"
             aria-label="Facebook (nouvel onglet)"
           >
             <Facebook className="size-4" aria-hidden="true" />

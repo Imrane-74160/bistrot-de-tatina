@@ -20,7 +20,7 @@ export function GalleryPreview() {
             as="h2"
             titleClassName="text-creme"
           >
-            <span className="text-creme/80">{galerie.texte}</span>
+            <span className="text-creme/90">{galerie.texte}</span>
           </SectionHeading>
           <Button href="/galerie" variant="jaune" className="shrink-0">
             <Camera aria-hidden="true" />
