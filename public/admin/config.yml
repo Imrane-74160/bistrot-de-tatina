@@ -6,7 +6,7 @@ backend:
   name: github
   repo: VOTRE-COMPTE/bistrot-de-tatina # TODO : à remplacer par owner/repo GitHub
   branch: main
-  base_url: https://VOTRE-SITE.vercel.app # TODO : URL du site (routes OAuth /api/auth)
+  base_url: https://bistrot-de-tatina.vercel.app # TODO : URL du site (routes OAuth /api/auth)
   auth_endpoint: api/auth
 
 # Permet d'éditer en local sans GitHub (avec `npx decap-server`).
@@ -18,7 +18,7 @@ public_folder: "/images" # chemin utilisé dans le site
 locale: "fr"
 
 # Message de la page de connexion
-site_url: https://VOTRE-SITE.vercel.app
+site_url: https://bistrot-de-tatina.vercel.app
 logo_url: /logo.png
 
 collections:
