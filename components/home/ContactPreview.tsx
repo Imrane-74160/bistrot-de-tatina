@@ -21,17 +21,7 @@ export function ContactPreview() {
               title={contact.titre}
               as="h2"
             >
-              {(() => {
-                const i = contact.texte.indexOf('? ');
-                if (i === -1) return contact.texte;
-                return (
-                  <>
-                    {contact.texte.slice(0, i + 1)}
-                    <br />
-                    {contact.texte.slice(i + 2)}
-                  </>
-                );
-              })()}
+              {contact.texte}
             </SectionHeading>
 
             {/* Horaires mis en avant */}
