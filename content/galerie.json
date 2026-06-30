@@ -1,0 +1,39 @@
+{
+  "_comment": "Galerie éditable. Chaque photo : src (dans /public/images), alt, categorie.",
+  "categories": [
+    { "id": "lieu", "label": "Le lieu" },
+    { "id": "cour", "label": "La cour" },
+    { "id": "bar", "label": "Le bar" },
+    { "id": "deco", "label": "Déco & fonderie" },
+    { "id": "table", "label": "À table" }
+  ],
+  "photos": [
+    { "src": "/images/atelier-container.jpg", "alt": "La façade : le container jaune « Le Bistrot de Tatina »", "categorie": "deco" },
+    { "src": "/images/atelier-mural.jpg", "alt": "L'intérieur et sa fresque colorée", "categorie": "lieu" },
+    { "src": "/images/atelier-talina.jpg", "alt": "L'enseigne peinte « Le Bistrot de Tatina »", "categorie": "lieu" },
+    { "src": "/images/atelier-poutres.jpg", "alt": "Structure métallique et enseigne intérieure", "categorie": "lieu" },
+    { "src": "/images/bar-comptoir.jpg", "alt": "Le long comptoir et ses tabourets", "categorie": "lieu" },
+    { "src": "/images/atelier-bidon.jpg", "alt": "Le bar et ses bidons colorés", "categorie": "lieu" },
+    { "src": "/images/cour-pergola.jpg", "alt": "La cour et sa pergola végétalisée", "categorie": "cour" },
+    { "src": "/images/cour-fauteuils.jpg", "alt": "Les fauteuils de la cour extérieure", "categorie": "cour" },
+    { "src": "/images/cour-plantes.jpg", "alt": "Plantes et bidons dans la cour", "categorie": "cour" },
+    { "src": "/images/cour-pompe.jpg", "alt": "La pompe à essence vintage de la cour", "categorie": "cour" },
+    { "src": "/images/cour-deck.jpg", "alt": "Le deck en bois de la terrasse", "categorie": "cour" },
+    { "src": "/images/bar-tireuses.jpg", "alt": "Les tireuses du bar en gros plan", "categorie": "bar" },
+    { "src": "/images/bar-tireuses-2.jpg", "alt": "Tireuses et bouteilles", "categorie": "bar" },
+    { "src": "/images/bar-service.jpg", "alt": "Service au bar pendant une soirée", "categorie": "bar" },
+    { "src": "/images/biere-blonde.jpg", "alt": "Deux bières blondes pression", "categorie": "bar" },
+    { "src": "/images/gobelets-tatina.jpg", "alt": "Gobelets « Le Bistrot de Tatina » empilés", "categorie": "bar" },
+    { "src": "/images/bar-talina.jpg", "alt": "Tireuses et enseigne du bar", "categorie": "bar" },
+    { "src": "/images/deco-fleurs.jpg", "alt": "Fleurs jaunes et blanches sur la tôle", "categorie": "deco" },
+    { "src": "/images/deco-fleurs-2.jpg", "alt": "Décor floral de la cour", "categorie": "deco" },
+    { "src": "/images/deco-panneaux.jpg", "alt": "Panneaux routiers et fleurs en décoration", "categorie": "deco" },
+    { "src": "/images/atelier-bouteilles.jpg", "alt": "Bonbonnes et containers, esprit fonderie", "categorie": "deco" },
+    { "src": "/images/atelier-structure.jpg", "alt": "Structure métallique et plafond d'atelier", "categorie": "deco" },
+    { "src": "/images/enseigne-lubrifiant.jpg", "alt": "Enseigne et bidon « Lubrifiant » détourné", "categorie": "deco" },
+    { "src": "/images/plat-grignotage.jpg", "alt": "Planche de charcuterie à partager", "categorie": "table" },
+    { "src": "/images/plat-tapas.jpg", "alt": "Assiette de pickles et grignotages", "categorie": "table" },
+    { "src": "/images/ardoise-carte.jpg", "alt": "L'ardoise de la carte écrite à la craie", "categorie": "table" },
+    { "src": "/images/ardoise-craie.jpg", "alt": "Le menu du jour à la craie", "categorie": "table" }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "nom": "Le Bistrot de Tatina",
+  "baseline": "Boire un verre qui a du sens",
+  "description": "Bistrot associatif et solidaire à Meythet (Annecy), installé dans un ancien atelier de chaudronnerie. Tous nos bénéfices sont reversés à la lutte locale contre le cancer.",
+  "fondation": 2022,
+  "adresse": {
+    "rue": "2 allée des Morilles",
+    "codePostal": "74960",
+    "ville": "Meythet",
+    "agglomeration": "Annecy",
+    "pays": "France"
+  },
+  "geo": {
+    "_comment": "TODO: à confirmer client — coordonnées GPS exactes de la porte jaune.",
+    "lat": 45.9095,
+    "lng": 6.0967
+  },
+  "telephone": "07 89 06 06 44",
+  "telephoneE164": "+33789060644",
+  "email": "contact@bistrot-tatina.fr",
+  "horaires": [
+    { "jours": "Jeudi", "ouverture": "17:00", "fermeture": "00:00" },
+    { "jours": "Vendredi", "ouverture": "17:00", "fermeture": "00:00" }
+  ],
+  "horairesTexte": "Jeudi & vendredi soir, dès 17h",
+  "horairesNote": "TODO: à confirmer client — horaires définitifs et éventuelle ouverture estivale.",
+  "capacite": "120 à 130 personnes + cour extérieure",
+  "cause": "Bénéfices intégralement reversés à la lutte locale contre le cancer : associations, hôpitaux, recherche et aide aux malades — notamment le cancer des ovaires.",
+  "reseaux": {
+    "instagram": "https://www.instagram.com/",
+    "instagramHandle": "@bistrotdetatina",
+    "facebook": "https://www.facebook.com/",
+    "_comment": "TODO: à confirmer client — URLs réelles Instagram & Facebook."
+  }
+}

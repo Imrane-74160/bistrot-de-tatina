@@ -1,0 +1,211 @@
+# ── Back-office Decap CMS — Le Bistrot de Tatina ──────────────────────────────
+# Édition locale : `npx decap-server` + `npm run dev`, puis http://localhost:3000/admin
+# Production (Vercel) : voir le README (créer une app OAuth GitHub + variables d'env).
+
+backend:
+  name: github
+  repo: VOTRE-COMPTE/bistrot-de-tatina # TODO : à remplacer par owner/repo GitHub
+  branch: main
+  base_url: https://VOTRE-SITE.vercel.app # TODO : URL du site (routes OAuth /api/auth)
+  auth_endpoint: api/auth
+
+# Permet d'éditer en local sans GitHub (avec `npx decap-server`).
+local_backend: true
+
+media_folder: "public/images" # où sont stockées les images uploadées
+public_folder: "/images" # chemin utilisé dans le site
+
+locale: "fr"
+
+# Message de la page de connexion
+site_url: https://VOTRE-SITE.vercel.app
+logo_url: /logo.png
+
+collections:
+  # ── ÉVÉNEMENTS (créer / modifier / supprimer) ──────────────────────────────
+  - name: "evenements"
+    label: "Événements"
+    label_singular: "Événement"
+    description: "Créer, modifier ou supprimer un événement de l'agenda."
+    folder: "content/evenements"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{titre}} — {{date}}"
+    sortable_fields: ["date", "titre"]
+    fields:
+      - { name: "titre", label: "Titre", widget: "string" }
+      - {
+          name: "date",
+          label: "Date",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+          format: "YYYY-MM-DD",
+          picker_utc: true,
+        }
+      - { name: "heure", label: "Heure d'ouverture", widget: "string", hint: "ex. 19h30" }
+      - { name: "resume", label: "Résumé court", widget: "text", hint: "Une phrase pour les cartes et le partage." }
+      - { name: "image", label: "Image", widget: "image" }
+      - { name: "platUnique", label: "Plat unique (optionnel)", widget: "string", required: false }
+      - { name: "tags", label: "Tags", widget: "list", required: false, hint: "ex. Concert, Soirée à thème" }
+      - { name: "lieu", label: "Lieu", widget: "string", default: "Le Bistrot de Tatina" }
+      - { name: "body", label: "Description complète", widget: "markdown" }
+
+  # ── CONTENU DU SITE (fichiers) ─────────────────────────────────────────────
+  - name: "contenu"
+    label: "Contenu du site"
+    files:
+      # GALERIE
+      - name: "galerie"
+        label: "Galerie photo"
+        file: "content/galerie.json"
+        description: "Ajouter, retirer ou réordonner les photos de la galerie."
+        fields:
+          - name: "categories"
+            label: "Catégories"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { name: "id", label: "Identifiant (sans espace)", widget: "string" }
+              - { name: "label", label: "Nom affiché", widget: "string" }
+          - name: "photos"
+            label: "Photos"
+            widget: "list"
+            summary: "{{fields.alt}}"
+            fields:
+              - { name: "src", label: "Image", widget: "image" }
+              - { name: "alt", label: "Description (texte alternatif)", widget: "string" }
+              - {
+                  name: "categorie",
+                  label: "Catégorie",
+                  widget: "select",
+                  options: ["lieu", "cour", "bar", "deco", "table"],
+                }
+
+      # CARTE
+      - name: "carte"
+        label: "La carte"
+        file: "content/carte.json"
+        description: "Boissons, grignotage et prix."
+        fields:
+          - { name: "intro", label: "Introduction", widget: "text" }
+          - name: "rubriques"
+            label: "Rubriques"
+            widget: "list"
+            summary: "{{fields.titre}}"
+            fields:
+              - { name: "id", label: "Identifiant (sans espace)", widget: "string" }
+              - { name: "titre", label: "Titre", widget: "string" }
+              - { name: "note", label: "Note (optionnel)", widget: "string", required: false }
+              - name: "articles"
+                label: "Articles"
+                widget: "list"
+                summary: "{{fields.nom}}"
+                fields:
+                  - { name: "nom", label: "Nom", widget: "string" }
+                  - { name: "description", label: "Description (optionnel)", widget: "string", required: false }
+                  - { name: "prix", label: "Prix", widget: "string", hint: "ex. 3.5 — ou un texte comme « selon arrivage »" }
+                  - { name: "local", label: "Produit local ?", widget: "boolean", default: false, required: false }
+                  - { name: "tags", label: "Tags (optionnel)", widget: "list", required: false }
+
+      # INFOS PRATIQUES
+      - name: "infos"
+        label: "Infos pratiques"
+        file: "content/infos.json"
+        description: "Adresse, téléphone, horaires, réseaux sociaux."
+        fields:
+          - { name: "nom", label: "Nom", widget: "string" }
+          - { name: "baseline", label: "Slogan", widget: "string" }
+          - { name: "description", label: "Description (SEO)", widget: "text" }
+          - { name: "fondation", label: "Année de création", widget: "number", value_type: "int" }
+          - name: "adresse"
+            label: "Adresse"
+            widget: "object"
+            fields:
+              - { name: "rue", label: "Rue", widget: "string" }
+              - { name: "codePostal", label: "Code postal", widget: "string" }
+              - { name: "ville", label: "Ville", widget: "string" }
+              - { name: "agglomeration", label: "Agglomération", widget: "string" }
+              - { name: "pays", label: "Pays", widget: "string" }
+          - name: "geo"
+            label: "Coordonnées GPS"
+            widget: "object"
+            fields:
+              - { name: "lat", label: "Latitude", widget: "number", value_type: "float" }
+              - { name: "lng", label: "Longitude", widget: "number", value_type: "float" }
+          - { name: "telephone", label: "Téléphone (affiché)", widget: "string" }
+          - { name: "telephoneE164", label: "Téléphone (format +33…)", widget: "string" }
+          - { name: "email", label: "E-mail", widget: "string" }
+          - name: "horaires"
+            label: "Horaires"
+            widget: "list"
+            summary: "{{fields.jours}} {{fields.ouverture}}-{{fields.fermeture}}"
+            fields:
+              - { name: "jours", label: "Jour(s)", widget: "string" }
+              - { name: "ouverture", label: "Ouverture", widget: "string" }
+              - { name: "fermeture", label: "Fermeture", widget: "string" }
+          - { name: "horairesTexte", label: "Horaires (texte affiché)", widget: "string" }
+          - { name: "horairesNote", label: "Note horaires", widget: "string", required: false }
+          - { name: "capacite", label: "Capacité", widget: "string" }
+          - { name: "cause", label: "La cause (texte)", widget: "text" }
+          - name: "reseaux"
+            label: "Réseaux sociaux"
+            widget: "object"
+            fields:
+              - { name: "instagram", label: "URL Instagram", widget: "string" }
+              - { name: "instagramHandle", label: "Pseudo Instagram", widget: "string" }
+              - { name: "facebook", label: "URL Facebook", widget: "string" }
+
+      # CHIFFRES D'IMPACT
+      - name: "chiffres"
+        label: "Chiffres d'impact"
+        file: "content/chiffres.json"
+        fields:
+          - { name: "accroche", label: "Accroche", widget: "string" }
+          - name: "stats"
+            label: "Chiffres clés"
+            widget: "list"
+            summary: "{{fields.valeur}}{{fields.suffixe}} {{fields.label}}"
+            fields:
+              - { name: "valeur", label: "Valeur", widget: "string" }
+              - { name: "suffixe", label: "Suffixe (optionnel)", widget: "string", required: false }
+              - { name: "label", label: "Libellé", widget: "string" }
+          - name: "parAnnee"
+            label: "Impact par année"
+            widget: "list"
+            summary: "{{fields.annee}}"
+            fields:
+              - { name: "annee", label: "Année", widget: "number", value_type: "int" }
+              - { name: "reverse", label: "Montant reversé", widget: "string" }
+              - { name: "adherents", label: "Adhérents", widget: "string" }
+              - { name: "faitMarquant", label: "Fait marquant", widget: "text" }
+
+      # PARTENAIRES & BÉNÉFICIAIRES
+      - name: "partenaires"
+        label: "Partenaires & bénéficiaires"
+        file: "content/partenaires.json"
+        fields:
+          - { name: "transparence", label: "Texte transparence", widget: "text" }
+          - name: "beneficiaires"
+            label: "Bénéficiaires"
+            widget: "list"
+            summary: "{{fields.nom}}"
+            fields:
+              - { name: "nom", label: "Nom", widget: "string" }
+              - { name: "type", label: "Type", widget: "hidden", default: "beneficiaire" }
+              - { name: "description", label: "Description", widget: "string", required: false }
+              - { name: "url", label: "Lien (optionnel)", widget: "string", required: false }
+              - { name: "logo", label: "Logo (optionnel)", widget: "image", required: false }
+          - name: "partenaires"
+            label: "Partenaires"
+            widget: "list"
+            summary: "{{fields.nom}}"
+            fields:
+              - { name: "nom", label: "Nom", widget: "string" }
+              - { name: "type", label: "Type", widget: "hidden", default: "partenaire" }
+              - { name: "description", label: "Description", widget: "string", required: false }
+              - { name: "url", label: "Lien (optionnel)", widget: "string", required: false }
+              - { name: "logo", label: "Logo (optionnel)", widget: "image", required: false }

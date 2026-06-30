@@ -1,0 +1,38 @@
+{
+  "_comment": "TODO: à confirmer client — noms réels des bénéficiaires et partenaires + logos (placeholders).",
+  "transparence": "Nos comptes sont tenus par l'association et les reversements sont communiqués chaque année à nos adhérents. La transparence fait partie de notre engagement.",
+  "beneficiaires": [
+    {
+      "nom": "Association locale — cancer des ovaires",
+      "type": "beneficiaire",
+      "description": "Soutien à la recherche et aux malades (TODO : nom réel)."
+    },
+    {
+      "nom": "Hôpital d'Annecy — service oncologie",
+      "type": "beneficiaire",
+      "description": "Aide aux patients et aux familles (TODO : intitulé exact)."
+    },
+    {
+      "nom": "Association d'aide aux malades",
+      "type": "beneficiaire",
+      "description": "Accompagnement au quotidien (TODO : nom réel)."
+    }
+  ],
+  "partenaires": [
+    {
+      "nom": "Producteur local — bières",
+      "type": "partenaire",
+      "description": "Brasserie de la région (TODO : nom réel)."
+    },
+    {
+      "nom": "Maraîcher de Meythet",
+      "type": "partenaire",
+      "description": "Fruits & légumes de saison (TODO : nom réel)."
+    },
+    {
+      "nom": "Ville de Meythet",
+      "type": "partenaire",
+      "description": "Soutien à la vie associative (TODO : à confirmer)."
+    }
+  ]
+}

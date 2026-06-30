@@ -1,0 +1,80 @@
+{
+  "_comment": "Textes éditables de la page d'accueil. Les images pointent vers /public/images.",
+  "hero": {
+    "eyebrow": "Bistrot associatif · Meythet (Annecy)",
+    "titre": ["Un verre", "qui a du sens"],
+    "description": "Depuis 2022, on se retrouve dans un ancien atelier de chaudronnerie pour boire un coup, refaire le monde — et reverser chaque bénéfice à la lutte locale contre le cancer.",
+    "image": "/images/atelier-container.jpg",
+    "imageAlt": "La façade du bistrot : le container jaune « Le Bistrot de Tatina – Bar associatif », signe de reconnaissance, dans son décor d'atelier"
+  },
+  "intro": {
+    "eyebrow": "Votre rendez-vous",
+    "titreLignes": ["Bon temps,", "bon cœur"],
+    "paragraphes": [
+      "Le Bistrot de Tatina, c'est un lieu de vie familial où l'on vient comme on est. On y partage une bière locale, une planche, une partie de cartes et beaucoup de bonne humeur.",
+      "Ici, la fête fait le bien : l'association ne cherche pas le profit, elle le redistribue à la lutte locale contre le cancer. La moindre voix compte."
+    ],
+    "cta": "Découvrir le lieu"
+  },
+  "story": {
+    "eyebrow": "Notre histoire",
+    "titre": "Né dans un atelier",
+    "paragraphes": [
+      "Tout commence en 2022 dans un ancien atelier de chaudronnerie : containers, acier patiné, et une porte jaune devenue notre signe de reconnaissance.",
+      "Une histoire de famille, montée pierre par pierre, avec une idée simple : transformer un verre partagé en soutien concret pour ceux qui luttent contre le cancer."
+    ],
+    "cta": "Lire notre histoire",
+    "image": "/images/atelier-talina.jpg",
+    "imageAlt": "L'intérieur de l'atelier, structure métallique et enseigne peinte"
+  },
+  "menu": {
+    "eyebrow": "À boire & à grignoter",
+    "titre": "La carte",
+    "texte": "Des bières et boissons locales, des planches à partager et un plat unique les soirs d'événement. Court, local, de saison.",
+    "cta": "Voir la carte",
+    "images": [
+      { "src": "/images/plat-grignotage.jpg", "alt": "Planche de charcuterie à partager et une bière" },
+      { "src": "/images/biere-blonde.jpg", "alt": "Deux bières blondes pression sur une table de la cour" },
+      { "src": "/images/plat-tapas.jpg", "alt": "Assiette de pickles et grignotages maison" }
+    ]
+  },
+  "offres": [
+    { "icone": "Music", "label": "Concerts" },
+    { "icone": "Brain", "label": "Blind test" },
+    { "icone": "UtensilsCrossed", "label": "Plat unique" },
+    { "icone": "PartyPopper", "label": "Soirées à thème" },
+    { "icone": "Carrot", "label": "Marché de producteurs" }
+  ],
+  "photoband": {
+    "mot": "Ensemble",
+    "image": "/images/bar-comptoir.jpg",
+    "imageAlt": "Le long comptoir du bistrot et ses tabourets",
+    "onglets": [
+      { "id": "lieu", "label": "Le lieu", "image": "/images/bar-comptoir.jpg", "alt": "Le long comptoir du bistrot et ses tabourets" },
+      { "id": "soirees", "label": "Les soirées", "image": "/images/bar-service.jpg", "alt": "Service au bar pendant une soirée" },
+      { "id": "cour", "label": "La cour", "image": "/images/cour-pergola.jpg", "alt": "La cour extérieure et sa pergola végétalisée" },
+      { "id": "carte", "label": "La carte", "image": "/images/ardoise-carte.jpg", "alt": "L'ardoise de la carte écrite à la craie" }
+    ]
+  },
+  "galerie": {
+    "eyebrow": "En images",
+    "titre": "La galerie",
+    "texte": "Le lieu, les soirées, la cour, les producteurs : un aperçu de l'ambiance qui vous attend.",
+    "cta": "Voir toute la galerie",
+    "images": [
+      { "src": "/images/cour-pergola.jpg", "alt": "La cour et sa pergola végétalisée" },
+      { "src": "/images/atelier-talina.jpg", "alt": "L'enseigne peinte « Le Bistrot de Tatina »" },
+      { "src": "/images/deco-fleurs.jpg", "alt": "Décor de fleurs jaunes et blanches sur la tôle" },
+      { "src": "/images/bar-tireuses.jpg", "alt": "Les tireuses du bar en gros plan" },
+      { "src": "/images/cour-fauteuils.jpg", "alt": "Les fauteuils de la cour extérieure" },
+      { "src": "/images/atelier-bidon.jpg", "alt": "Le bar et ses bidons colorés à l'intérieur" }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Passez nous voir",
+    "titre": "On vous attend",
+    "texte": "Une question, une envie de privatiser une soirée, ou juste l'adresse pour venir ? On vous répond avec plaisir.",
+    "image": "/images/cour-pompe.jpg",
+    "imageAlt": "La cour du bistrot et sa pompe à essence vintage"
+  }
+}

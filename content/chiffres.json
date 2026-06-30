@@ -1,0 +1,30 @@
+{
+  "_comment": "TODO: à confirmer client — chiffres réels d'impact. Placeholders réalistes en attendant.",
+  "accroche": "Depuis 2022, chaque verre partagé fait avancer une cause.",
+  "stats": [
+    { "valeur": "12", "suffixe": "k€", "label": "Reversés à la cause" },
+    { "valeur": "350", "suffixe": "+", "label": "Adhérents fidèles" },
+    { "valeur": "40", "suffixe": "+", "label": "Soirées par an" },
+    { "valeur": "3", "label": "Associations soutenues" }
+  ],
+  "parAnnee": [
+    {
+      "annee": 2022,
+      "reverse": "TODO",
+      "adherents": "TODO",
+      "faitMarquant": "Ouverture du bistrot dans l'ancien atelier de chaudronnerie."
+    },
+    {
+      "annee": 2023,
+      "reverse": "TODO",
+      "adherents": "TODO",
+      "faitMarquant": "Premiers reversements aux associations locales."
+    },
+    {
+      "annee": 2024,
+      "reverse": "TODO",
+      "adherents": "TODO",
+      "faitMarquant": "Aménagement de la cour extérieure et nouveaux rendez-vous."
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Archivo', system-ui, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+
+  * {
+    border-color: rgb(35 61 57 / 0.12);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Décalage pour le header sticky lors des ancres */
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-creme text-petrole font-body text-base antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Titres en Bebas, capitales, interlignage serré (§3.2) */
+  h1,
+  h2,
+  h3 {
+    @apply font-display uppercase leading-[0.95] tracking-tight;
+  }
+
+  /* Focus visible homogène et accessible (§3.3 a11y) */
+  :focus-visible {
+    @apply outline-none ring-2 ring-terracotta ring-offset-2 ring-offset-creme;
+  }
+
+  /* Sélection */
+  ::selection {
+    @apply bg-jaune text-petrole;
+  }
+
+  /* Respect du choix utilisateur (a11y) */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* ── Conteneur de page large et cohérent ─────────────────────────────────── */
+  .container-bistrot {
+    @apply mx-auto w-full max-w-[1680px] px-5 sm:px-8 lg:px-12 xl:px-16;
+  }
+
+  /* ── Lien d'évitement (skip link) ────────────────────────────────────────── */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]
+      focus:rounded-pill focus:bg-petrole focus:px-5 focus:py-3 focus:font-mono
+      focus:text-sm focus:font-bold focus:uppercase focus:text-jaune;
+  }
+
+  /* ── Label mono au-dessus des grands titres (§3.3 « YOUR GO-TO FOR ») ─────── */
+  .eyebrow {
+    @apply font-mono text-xs font-bold uppercase tracking-[0.25em] text-terracotta;
+  }
+
+  /* ── Contenu éditorial (Markdown rendu) ──────────────────────────────────── */
+  .prose-bistrot {
+    @apply text-lg leading-relaxed text-petrole/85;
+  }
+  .prose-bistrot > * + * {
+    @apply mt-5;
+  }
+  .prose-bistrot h2 {
+    @apply mt-10 font-display text-3xl uppercase leading-tight text-petrole sm:text-4xl;
+  }
+  .prose-bistrot h3 {
+    @apply mt-8 font-display text-2xl uppercase leading-tight text-petrole;
+  }
+  .prose-bistrot strong {
+    @apply font-bold text-petrole;
+  }
+  .prose-bistrot a {
+    @apply font-semibold text-terracotta underline underline-offset-2 hover:text-petrole;
+  }
+  .prose-bistrot ul {
+    @apply ml-5 list-disc space-y-2 marker:text-terracotta;
+  }
+  .prose-bistrot ol {
+    @apply ml-5 list-decimal space-y-2 marker:text-terracotta;
+  }
+  .prose-bistrot blockquote {
+    @apply border-l-4 border-jaune bg-jaune/10 px-5 py-3 font-medium italic text-petrole;
+  }
+}
+
+@layer utilities {
+  /* Équilibrage typographique des titres */
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* ── Badge logo animé (composant AnimatedBadge) ─────────────────────────────── */
+.tatina-badge--animated {
+  animation: tatina-spin 28s linear infinite;
+  will-change: transform;
+  transform-origin: center;
+}
+.tatina-bulb {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.tatina-badge--animated .tatina-bulb {
+  animation: tatina-twinkle 2.4s ease-in-out infinite;
+}
+.tatina-badge--animated .tatina-bulb-1 {
+  animation-delay: 0s;
+}
+.tatina-badge--animated .tatina-bulb-2 {
+  animation-delay: 0.18s;
+}
+.tatina-badge--animated .tatina-bulb-3 {
+  animation-delay: 0.42s;
+}
+.tatina-badge--animated .tatina-bulb-4 {
+  animation-delay: 0.66s;
+}
+.tatina-badge--animated .tatina-bulb-5 {
+  animation-delay: 0.9s;
+}
+.tatina-badge--animated .tatina-bulb-6 {
+  animation-delay: 1.14s;
+}
+.tatina-badge--animated .tatina-bulb-7 {
+  animation-delay: 1.38s;
+}
+
+@keyframes tatina-twinkle {
+  0%,
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.55;
+    filter: brightness(1.35) saturate(1.1);
+  }
+}
+
+@keyframes tatina-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Bandeau « mot répété » (PhotoBandTabs) ─────────────────────────────────── */
+.tatina-marquee {
+  animation: tatina-marquee 22s linear infinite;
+}
+@keyframes tatina-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

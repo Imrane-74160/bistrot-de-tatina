@@ -1,0 +1,39 @@
+{
+  "_comment": "TODO: à confirmer client — carte et prix réels. Prix en euros (nombre) ou texte libre.",
+  "intro": "Une carte courte, locale et de saison. On privilégie les producteurs du coin et le fait maison. La carte évolue au gré des arrivages et des envies.",
+  "rubriques": [
+    {
+      "id": "bieres",
+      "titre": "Bières & boissons locales",
+      "note": "Nos bières pression viennent de brasseries de la région.",
+      "articles": [
+        { "nom": "Blonde de la région", "description": "Pression, 25 cl", "prix": 3.5, "local": true },
+        { "nom": "Blonde de la région", "description": "Pression, 50 cl", "prix": 6, "local": true },
+        { "nom": "Bière ambrée artisanale", "description": "Bouteille 33 cl", "prix": 5, "local": true },
+        { "nom": "Vin au verre", "description": "Rouge / blanc / rosé de Savoie", "prix": 4, "local": true },
+        { "nom": "Jus de fruits artisanal", "description": "Pomme ou poire de Haute-Savoie", "prix": 3.5, "local": true },
+        { "nom": "Softs & limonades", "description": "Maison ou locales", "prix": 3 }
+      ]
+    },
+    {
+      "id": "grignotage",
+      "titre": "À grignoter",
+      "note": "Parfait pour accompagner un verre entre amis.",
+      "articles": [
+        { "nom": "Planche de charcuterie", "description": "Charcuteries de Savoie à partager", "prix": 12, "local": true },
+        { "nom": "Planche de fromages", "description": "Fromages affinés de la région", "prix": 11, "local": true },
+        { "nom": "Planche mixte", "description": "Le meilleur des deux", "prix": 14, "local": true },
+        { "nom": "Pickles & légumes croquants", "description": "Maison, de saison", "prix": 5 },
+        { "nom": "Bol d'olives & fruits secs", "prix": 4 }
+      ]
+    },
+    {
+      "id": "plat-unique",
+      "titre": "Le plat unique",
+      "note": "Un seul plat, fait maison, certains soirs d'événement. Annoncé sur l'agenda.",
+      "articles": [
+        { "nom": "Plat du soir", "description": "Variable selon l'événement — voir l'agenda", "prix": "selon le soir" }
+      ]
+    }
+  ]
+}

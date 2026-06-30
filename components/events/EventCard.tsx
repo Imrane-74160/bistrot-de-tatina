@@ -1,0 +1,104 @@
+import Link from 'next/link';
+import Image from 'next/image';
+import { Clock, MapPin, UtensilsCrossed, ArrowRight } from 'lucide-react';
+import { Badge } from '@/components/Badge';
+import { formatDateShort, formatDateFr } from '@/lib/events';
+import type { EvenementMeta } from '@/types';
+import { cn } from '@/lib/utils';
+
+/** Carte événement (agenda + accueil). */
+export function EventCard({
+  event,
+  className,
+  past = false,
+}: {
+  event: EvenementMeta;
+  className?: string;
+  past?: boolean;
+}) {
+  const { jour, mois } = formatDateShort(event.date);
+  return (
+    <article
+      className={cn(
+        'group relative flex flex-col overflow-hidden rounded-card bg-creme shadow-card ring-1 ring-petrole/10 transition-transform duration-200 hover:-translate-y-1',
+        past && 'opacity-90',
+        className,
+      )}
+    >
+      <div className="relative aspect-[4/3] overflow-hidden">
+        <Image
+          src={event.image}
+          alt=""
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className={cn(
+            'object-cover transition-transform duration-500 group-hover:scale-105',
+            past && 'grayscale-[0.3]',
+          )}
+        />
+        {/* Pastille date */}
+        <div className="absolute left-4 top-4 flex h-16 w-16 flex-col items-center justify-center rounded-2xl bg-jaune text-petrole shadow-card">
+          <span className="font-display text-3xl leading-none">{jour}</span>
+          <span className="font-mono text-[0.65rem] font-bold uppercase tracking-wider">
+            {mois}
+          </span>
+        </div>
+      </div>
+
+      <div className="flex flex-1 flex-col gap-3 p-5">
+        {event.tags.length > 0 && (
+          <div className="flex flex-wrap gap-1.5">
+            {event.tags.slice(0, 2).map((tag) => (
+              <Badge key={tag} variant="soft" size="sm">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
+
+        <h3 className="text-2xl leading-tight">
+          <Link
+            href={`/evenements/${event.slug}`}
+            className="after:absolute after:inset-0 focus-visible:outline-none"
+          >
+            {event.titre}
+          </Link>
+        </h3>
+
+        <p className="line-clamp-3 text-sm leading-relaxed text-petrole/75">
+          {event.resume}
+        </p>
+
+        <dl className="mt-auto flex flex-col gap-1.5 font-mono text-xs text-petrole/70">
+          <div className="flex items-center gap-2">
+            <dt className="sr-only">Date et heure</dt>
+            <Clock className="size-3.5 shrink-0 text-terracotta" aria-hidden="true" />
+            <dd className="capitalize">
+              {formatDateFr(event.date)} · {event.heure}
+            </dd>
+          </div>
+          {event.platUnique && (
+            <div className="flex items-center gap-2">
+              <dt className="sr-only">Plat unique</dt>
+              <UtensilsCrossed className="size-3.5 shrink-0 text-terracotta" aria-hidden="true" />
+              <dd>{event.platUnique}</dd>
+            </div>
+          )}
+          <div className="flex items-center gap-2">
+            <dt className="sr-only">Lieu</dt>
+            <MapPin className="size-3.5 shrink-0 text-terracotta" aria-hidden="true" />
+            <dd>{event.lieu}</dd>
+          </div>
+        </dl>
+
+        <span className="mt-1 inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-[0.12em] text-terracotta">
+          {past ? 'Revivre la soirée' : 'En savoir plus'}
+          <ArrowRight
+            className="size-4 transition-transform group-hover:translate-x-1"
+            aria-hidden="true"
+          />
+        </span>
+      </div>
+    </article>
+  );
+}
