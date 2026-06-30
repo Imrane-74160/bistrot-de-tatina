@@ -60,13 +60,13 @@ export function PageHero({
                 sizes="(max-width: 1680px) 100vw, 1680px"
                 className="object-cover"
               />
-              {/* Assombrissement pétrole : fort en bas (texte) + sur la gauche, image visible en haut */}
+              {/* Assombrissement pétrole : quasi opaque en bas (texte) + fort à gauche, image visible en haut */}
               <div
-                className="absolute inset-0 bg-[linear-gradient(to_top,rgba(35,61,57,0.96),rgba(35,61,57,0.62)_42%,rgba(35,61,57,0.28)_72%,rgba(35,61,57,0.12))]"
+                className="absolute inset-0 bg-[linear-gradient(to_top,rgba(35,61,57,0.99),rgba(35,61,57,0.94)_24%,rgba(35,61,57,0.62)_50%,rgba(35,61,57,0.25)_78%,rgba(35,61,57,0.05))]"
                 aria-hidden="true"
               />
               <div
-                className="absolute inset-0 bg-[linear-gradient(to_right,rgba(35,61,57,0.6),rgba(35,61,57,0)_60%)]"
+                className="absolute inset-0 bg-[linear-gradient(to_right,rgba(35,61,57,0.72),rgba(35,61,57,0.1)_55%,transparent_75%)]"
                 aria-hidden="true"
               />
             </div>

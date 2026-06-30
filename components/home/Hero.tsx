@@ -26,11 +26,11 @@ export function Hero() {
             />
             {/* Dégradés : sombre en bas (titre) + à droite (lisibilité), container jaune préservé à gauche */}
             <div
-              className="absolute inset-0 bg-[linear-gradient(to_top,rgba(35,61,57,0.92),rgba(35,61,57,0.4)_45%,transparent_78%)]"
+              className="absolute inset-0 bg-[linear-gradient(to_top,rgba(35,61,57,0.95),rgba(35,61,57,0.55)_45%,rgba(35,61,57,0.12)_82%)]"
               aria-hidden="true"
             />
             <div
-              className="absolute inset-0 bg-[linear-gradient(to_left,rgba(35,61,57,0.6),transparent_55%)]"
+              className="absolute inset-0 bg-[linear-gradient(to_left,rgba(35,61,57,0.75),rgba(35,61,57,0.1)_52%,transparent_70%)]"
               aria-hidden="true"
             />
           </div>
