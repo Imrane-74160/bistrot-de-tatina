@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ArrowRight, Camera } from 'lucide-react';
 import { Button } from '@/components/Button';
 import { SectionHeading } from '@/components/SectionHeading';
+import { Reveal } from '@/components/Reveal';
 import { homeContent } from '@/lib/content';
 
 /** Aperçu de la galerie (§ aperçu page Galerie) — grille de photos vers /galerie. */
@@ -28,7 +29,8 @@ export function GalleryPreview() {
         </div>
 
         {/* Grille mosaïque : 1ʳᵉ photo en grand */}
-        <ul className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+        <Reveal>
+          <ul className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
           {galerie.images.map((photo, i) => (
             <li
               key={photo.src}
@@ -51,7 +53,8 @@ export function GalleryPreview() {
               </div>
             </li>
           ))}
-        </ul>
+          </ul>
+        </Reveal>
 
         <Button
           href="/galerie"

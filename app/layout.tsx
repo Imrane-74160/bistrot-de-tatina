@@ -48,6 +48,14 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} ${mono.variable}`}
     >
       <body className="min-h-screen pb-[76px] sm:pb-0">
+        <noscript>
+          <style
+            dangerouslySetInnerHTML={{
+              __html:
+                '.reveal{opacity:1 !important;transform:none !important}',
+            }}
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -1,5 +1,6 @@
 import { Button } from '@/components/Button';
 import { AnimatedBadge } from '@/components/AnimatedBadge';
+import { Reveal } from '@/components/Reveal';
 import { homeContent } from '@/lib/content';
 
 /**
@@ -14,16 +15,16 @@ export function IntroBlock() {
       <div className="container-bistrot">
         <div className="grid items-end gap-8 lg:grid-cols-2 lg:gap-16">
           {/* Titre */}
-          <div>
+          <Reveal>
             <p className="eyebrow mb-3">{intro.eyebrow}</p>
             <h2 className="text-7xl leading-[0.82] sm:text-8xl lg:text-[7.5rem]">
               <span className="block">{intro.titreLignes[0]}</span>
               <span className="block text-terracotta">{intro.titreLignes[1]}</span>
             </h2>
-          </div>
+          </Reveal>
 
           {/* Paragraphe + CTA */}
-          <div className="flex flex-col gap-5 lg:pb-3">
+          <Reveal delay={140} className="flex flex-col gap-5 lg:pb-3">
             {intro.paragraphes.map((p, i) => (
               <p
                 key={i}
@@ -37,7 +38,7 @@ export function IntroBlock() {
                 {intro.cta}
               </Button>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
 

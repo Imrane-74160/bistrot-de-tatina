@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/Button';
 import { SectionHeading } from '@/components/SectionHeading';
+import { Reveal } from '@/components/Reveal';
 import { homeContent } from '@/lib/content';
 
 /** « La carte » façon « FOOD & EATS » (§4.7) — pétrole sombre, texte + horaires + photos. */
@@ -34,7 +35,7 @@ export function MenuSection() {
           </div>
 
           {/* Photos en collage */}
-          <div className="relative">
+          <Reveal variant="zoom" className="relative">
             <div className="overflow-hidden rounded-card shadow-overlap ring-1 ring-creme/10">
               <div className="relative aspect-[4/3] w-full">
                 <Image
@@ -57,7 +58,7 @@ export function MenuSection() {
                 />
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

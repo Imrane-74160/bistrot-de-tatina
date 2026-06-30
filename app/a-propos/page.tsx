@@ -8,6 +8,7 @@ import { OverlapCard } from '@/components/OverlapCard';
 import { Button } from '@/components/Button';
 import { StatsBand } from '@/components/home/StatsBand';
 import { Partners } from '@/components/home/Partners';
+import { Reveal } from '@/components/Reveal';
 import { JsonLd } from '@/components/JsonLd';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { chiffresContent } from '@/lib/content';
@@ -121,22 +122,24 @@ export default function AProposPage() {
           étapes depuis l'ouverture.
         </SectionHeading>
         <ol className="relative grid gap-6 sm:grid-cols-3">
-          {chiffresContent.parAnnee.map((annee) => (
-            <li
-              key={annee.annee}
-              className="flex flex-col gap-3 rounded-card border border-petrole/12 bg-petrole/[0.03] p-6"
-            >
-              <span className="font-display text-5xl text-terracotta">
-                {annee.annee}
-              </span>
-              <p className="text-pretty text-petrole/80">{annee.faitMarquant}</p>
-              <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/50">
-                Reversé : {annee.reverse} · Adhérents : {annee.adherents}
-              </p>
+          {chiffresContent.parAnnee.map((annee, i) => (
+            <li key={annee.annee} className="h-full">
+              <Reveal
+                delay={i * 110}
+                className="flex h-full flex-col gap-3 rounded-card border border-petrole/12 bg-petrole/[0.03] p-6 transition-transform duration-200 hover:-translate-y-1"
+              >
+                <span className="font-display text-5xl text-terracotta">
+                  {annee.annee}
+                </span>
+                <p className="text-pretty text-petrole/80">{annee.faitMarquant}</p>
+                <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/50">
+                  Reversé : {annee.reverse} · Adhérents : {annee.adherents}
+                </p>
+              </Reveal>
             </li>
           ))}
         </ol>
-        <p className="mt-6 font-mono text-[0.7rem] uppercase tracking-wider text-petrole/50">
+        <p className="mt-6 text-center font-mono text-[0.7rem] uppercase tracking-wider text-petrole/50">
           TODO : chiffres réels par année à fournir par l'association.
         </p>
       </Section>

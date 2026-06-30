@@ -2,6 +2,7 @@ import { ArrowRight, CalendarDays } from 'lucide-react';
 import { Button } from '@/components/Button';
 import { SectionHeading } from '@/components/SectionHeading';
 import { EventCard } from '@/components/events/EventCard';
+import { Reveal } from '@/components/Reveal';
 import { getUpcomingEvents } from '@/lib/events';
 
 /** « Prochains événements » (§4.10) — 3 cartes depuis l'agenda. */
@@ -26,8 +27,10 @@ export function UpcomingEvents() {
 
         {events.length > 0 ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {events.map((event) => (
-              <EventCard key={event.slug} event={event} />
+            {events.map((event, i) => (
+              <Reveal key={event.slug} delay={i * 110} className="h-full">
+                <EventCard event={event} />
+              </Reveal>
             ))}
           </div>
         ) : (

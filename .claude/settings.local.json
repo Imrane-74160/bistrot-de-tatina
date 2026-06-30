@@ -21,7 +21,11 @@
       "Bash(awk '{print $6, $7, $8}')",
       "Bash(find \"C:/Users/imran/OneDrive/Bureau/Le_bistrot\" \"C:/Users/imran/Downloads\" \"C:/Users/imran/OneDrive/Bureau\" \"C:/Users/imran/Pictures\" \"C:/Users/imran/Desktop\" -type f \\\\\\( -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.png\" -o -iname \"*.webp\" \\\\\\) -newermt \"2026-06-29 15:45\" 2>/dev/null | grep -iv \"node_modules\\\\|\\\\.next\\\\|scratchpad\" | head -20; echo \"=== exit ===\")",
       "Bash(git --version)",
-      "Bash(git rev-parse *)"
+      "Bash(git rev-parse *)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ]
   }
 }

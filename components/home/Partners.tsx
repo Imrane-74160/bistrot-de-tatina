@@ -1,6 +1,7 @@
 import { Heart, HandHeart } from 'lucide-react';
 import { SectionHeading } from '@/components/SectionHeading';
 import { PartnerLogos } from '@/components/PartnerLogos';
+import { Reveal } from '@/components/Reveal';
 import { partenairesContent } from '@/lib/content';
 
 /** « Partenaires & bénéficiaires » (§4.11) — propre à Tatina. */
@@ -21,20 +22,20 @@ export function Partners() {
         </SectionHeading>
 
         <div className="grid gap-10 lg:grid-cols-2">
-          <div className="flex flex-col gap-4">
-            <h3 className="flex items-center gap-2 font-mono text-sm font-bold uppercase tracking-[0.16em] text-terracotta">
+          <Reveal className="flex flex-col gap-4">
+            <h3 className="flex items-center justify-center gap-2 font-mono text-sm font-bold uppercase tracking-[0.16em] text-terracotta">
               <HandHeart className="size-5" aria-hidden="true" />
               Les bénéficiaires
             </h3>
             <PartnerLogos items={beneficiaires} />
-          </div>
-          <div className="flex flex-col gap-4">
-            <h3 className="flex items-center gap-2 font-mono text-sm font-bold uppercase tracking-[0.16em] text-sauge">
+          </Reveal>
+          <Reveal delay={120} className="flex flex-col gap-4">
+            <h3 className="flex items-center justify-center gap-2 font-mono text-sm font-bold uppercase tracking-[0.16em] text-sauge">
               <Heart className="size-5" aria-hidden="true" />
               Nos partenaires locaux
             </h3>
             <PartnerLogos items={partenaires} />
-          </div>
+          </Reveal>
         </div>
 
         <p className="mt-8 text-center font-mono text-[0.7rem] uppercase tracking-wider text-petrole/50">

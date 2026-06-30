@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { MapPin, Clock, Phone, Navigation, Mail } from 'lucide-react';
 import { Button } from '@/components/Button';
 import { SectionHeading } from '@/components/SectionHeading';
+import { Reveal } from '@/components/Reveal';
 import { homeContent } from '@/lib/content';
 import { site, adresseLigne, itineraireUrl } from '@/lib/site';
 
@@ -77,7 +78,7 @@ export function ContactPreview() {
           </div>
 
           {/* Photo */}
-          <div className="overflow-hidden rounded-card shadow-overlap ring-1 ring-petrole/10">
+          <Reveal variant="zoom" className="overflow-hidden rounded-card shadow-overlap ring-1 ring-petrole/10">
             <div className="relative aspect-[4/3] w-full lg:aspect-[4/5]">
               <Image
                 src={contact.image}
@@ -87,7 +88,7 @@ export function ContactPreview() {
                 className="object-cover"
               />
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

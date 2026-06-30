@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { Reveal } from '@/components/Reveal';
 
 /**
  * En-tête de section (§3.3) : petit label Space Mono en capitales
@@ -28,7 +29,7 @@ export function SectionHeading({
   children?: React.ReactNode;
 }) {
   return (
-    <div
+    <Reveal
       className={cn(
         'flex flex-col gap-3',
         align === 'center' && 'items-center text-center',
@@ -65,6 +66,6 @@ export function SectionHeading({
           {children}
         </div>
       )}
-    </div>
+    </Reveal>
   );
 }

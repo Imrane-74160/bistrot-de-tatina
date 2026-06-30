@@ -6,6 +6,7 @@ import {
   Carrot,
   type LucideIcon,
 } from 'lucide-react';
+import { Reveal } from '@/components/Reveal';
 import { homeContent } from '@/lib/content';
 
 const ICONS: Record<string, LucideIcon> = {
@@ -26,21 +27,24 @@ export function OfferIconStrip() {
           Ce qui vous attend au bistrot
         </h2>
         <ul className="grid grid-cols-2 gap-x-4 gap-y-12 sm:grid-cols-3 lg:grid-cols-5">
-          {offres.map((offre) => {
+          {offres.map((offre, i) => {
             const Icon = ICONS[offre.icone] ?? PartyPopper;
             return (
-              <li
-                key={offre.label}
-                className="flex flex-col items-center gap-4 text-center"
-              >
-                <Icon
-                  className="size-14 text-jaune sm:size-16"
-                  strokeWidth={1.25}
-                  aria-hidden="true"
-                />
-                <span className="font-mono text-sm font-bold uppercase tracking-[0.14em] text-petrole">
-                  {offre.label}
-                </span>
+              <li key={offre.label}>
+                <Reveal
+                  delay={i * 90}
+                  variant="zoom"
+                  className="group flex flex-col items-center gap-4 text-center"
+                >
+                  <Icon
+                    className="size-14 text-jaune transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110 sm:size-16"
+                    strokeWidth={1.25}
+                    aria-hidden="true"
+                  />
+                  <span className="font-mono text-sm font-bold uppercase tracking-[0.14em] text-petrole">
+                    {offre.label}
+                  </span>
+                </Reveal>
               </li>
             );
           })}
