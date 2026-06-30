@@ -20,9 +20,20 @@ export function ContactPreview() {
               eyebrow={contact.eyebrow}
               title={contact.titre}
               as="h2"
-            >
-              {contact.texte}
-            </SectionHeading>
+            />
+            <p className="max-w-prose text-pretty text-lg leading-relaxed text-petrole/85">
+              {(() => {
+                const i = contact.texte.indexOf('? ');
+                if (i === -1) return contact.texte;
+                return (
+                  <>
+                    {contact.texte.slice(0, i + 1)}
+                    <br />
+                    {contact.texte.slice(i + 2)}
+                  </>
+                );
+              })()}
+            </p>
 
             {/* Horaires mis en avant */}
             <div className="flex w-full items-start gap-4 rounded-card bg-jaune p-5 text-petrole">

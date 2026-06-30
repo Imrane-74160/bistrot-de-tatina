@@ -187,7 +187,9 @@
 .reveal[data-variant='fade'] {
   transform: none;
 }
-.reveal--in {
+/* Spécificité égale aux variantes ci-dessus (et placée après) pour bien
+   neutraliser le transform une fois révélé — sinon le décalage persiste. */
+.reveal--in[data-variant] {
   opacity: 1;
   transform: none;
 }
