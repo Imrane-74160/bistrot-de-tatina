@@ -14,7 +14,7 @@ export function ContactPreview() {
       <div className="container-bistrot py-16 sm:py-20 lg:py-24">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Infos */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 lg:max-w-xl">
             <SectionHeading
               id="contact-titre"
               eyebrow={contact.eyebrow}
@@ -35,7 +35,7 @@ export function ContactPreview() {
             </SectionHeading>
 
             {/* Horaires mis en avant */}
-            <div className="flex w-fit max-w-full items-start gap-4 rounded-card bg-jaune p-5 text-petrole">
+            <div className="flex w-full items-start gap-4 rounded-card bg-jaune p-5 text-petrole">
               <Clock className="mt-0.5 size-6 shrink-0" aria-hidden="true" />
               <div>
                 <p className="font-mono text-xs font-bold uppercase tracking-[0.16em]">
