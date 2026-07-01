@@ -28,10 +28,9 @@
   "cause": "L'essentiel des bénéfices est reversé à la lutte locale contre le cancer : associations, hôpitaux, recherche et aide aux malades — notamment le cancer des ovaires. Une petite trésorerie est conservée pour l'entretien et l'amélioration du lieu chaque année.",
   "nomOrigine": "« Tatina » vient de « Tatie Nadia », la sœur de Samia, notre présidente. Proche de tous les bénévoles du départ, Nadia est partie d'un cancer quelques années avant l'ouverture : le bistrot est né en sa mémoire.",
   "adhesion": {
-    "montant": "",
+    "montant": "15 €",
     "duree": "Valable 1 an, renouvelable chaque année.",
-    "reglement": "Le règlement de l'adhésion se fait sur place, au bistrot.",
-    "_commentAdhesion": "TODO: renseigner le montant de l'adhésion (ex. « 10 € ») — laissé vide en attendant."
+    "reglement": "Le règlement de l'adhésion se fait sur place, au bistrot."
   },
   "reseaux": {
     "instagram": "https://www.instagram.com/",

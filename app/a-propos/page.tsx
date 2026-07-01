@@ -208,10 +208,11 @@ export default function AProposPage() {
               </li>
             </ul>
             <p className="text-creme/90">
-              L'adhésion est <strong className="text-creme">valable un an, renouvelable</strong> chaque
-              année, et se règle sur place au bistrot. Pour gagner du temps, vous
-              pouvez pré-adhérer en ligne en quelques secondes : on prépare votre
-              fiche, il ne vous reste qu'à passer régler votre adhésion.
+              L'adhésion est de <strong className="text-creme">15 €</strong>,
+              <strong className="text-creme"> valable un an, renouvelable</strong> chaque année, et se
+              règle sur place au bistrot. Pour gagner du temps, vous pouvez
+              pré-adhérer en ligne en quelques secondes : on prépare votre fiche,
+              il ne vous reste qu'à passer régler votre adhésion.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button href="/adhesion" variant="jaune">
