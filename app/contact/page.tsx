@@ -4,8 +4,8 @@ import { PageHero } from '@/components/PageHero';
 import { Section } from '@/components/Section';
 import { Button } from '@/components/Button';
 import { ContactForm } from '@/components/forms/ContactForm';
+import { AdhesionCta } from '@/components/AdhesionCta';
 import { JsonLd } from '@/components/JsonLd';
-import { AmbientGlow } from '@/components/decor/AmbientGlow';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { site, adresseLigne, itineraireUrl } from '@/lib/site';
 
@@ -38,8 +38,7 @@ export default function ContactPage() {
         imageAlt="La cour du bistrot et ses fauteuils"
       />
 
-      <Section tone="creme" spacing="lg" className="isolate">
-        <AmbientGlow />
+      <Section tone="creme" spacing="lg">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           {/* Infos pratiques */}
           <div className="flex flex-col gap-8">
@@ -157,6 +156,11 @@ export default function ContactPage() {
             <ContactForm />
           </div>
         </div>
+      </Section>
+
+      {/* Devenir membre */}
+      <Section tone="creme" spacing="md" className="border-t border-petrole/10">
+        <AdhesionCta variant="petrole" />
       </Section>
     </>
   );

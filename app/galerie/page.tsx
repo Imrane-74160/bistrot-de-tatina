@@ -3,8 +3,8 @@ import { PageHero } from '@/components/PageHero';
 import { Section } from '@/components/Section';
 import { Gallery } from '@/components/gallery/Gallery';
 import { SectionHeading } from '@/components/SectionHeading';
+import { AdhesionCta } from '@/components/AdhesionCta';
 import { JsonLd } from '@/components/JsonLd';
-import { AmbientGlow } from '@/components/decor/AmbientGlow';
 import { StringLights } from '@/components/decor/StringLights';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 
@@ -34,7 +34,6 @@ export default function GaleriePage() {
       />
 
       <Section tone="creme" spacing="lg" className="isolate">
-        <AmbientGlow />
         <StringLights tone="light" className="mx-auto max-w-4xl" />
         <SectionHeading
           eyebrow="L'ambiance en photos"
@@ -49,6 +48,11 @@ export default function GaleriePage() {
           tout de suite comme à la maison.
         </SectionHeading>
         <Gallery />
+      </Section>
+
+      {/* Devenir membre */}
+      <Section tone="creme" spacing="md" className="border-t border-petrole/10">
+        <AdhesionCta variant="petrole" />
       </Section>
     </>
   );

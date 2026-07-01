@@ -10,7 +10,6 @@ import { StatsBand } from '@/components/home/StatsBand';
 import { Partners } from '@/components/home/Partners';
 import { Reveal } from '@/components/Reveal';
 import { JsonLd } from '@/components/JsonLd';
-import { AmbientGlow } from '@/components/decor/AmbientGlow';
 import { StringLights } from '@/components/decor/StringLights';
 import { FloatingSparks } from '@/components/decor/FloatingSparks';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
@@ -42,8 +41,7 @@ export default function AProposPage() {
       />
 
       {/* Histoire + lieu */}
-      <Section tone="creme" spacing="lg" className="isolate">
-        <AmbientGlow />
+      <Section tone="creme" spacing="lg">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <OverlapCard className="ring-1 ring-petrole/10">
             <div className="relative aspect-[4/3] w-full">

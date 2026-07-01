@@ -35,14 +35,14 @@ export function FaqSection() {
             <li key={q.question}>
               <Reveal delay={i * 55}>
                 <details className="group rounded-card border border-petrole/12 bg-petrole/[0.03] transition-colors open:border-petrole/20 open:bg-petrole/[0.05]">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 text-lg font-semibold leading-snug text-petrole marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 focus-visible:ring-offset-creme [&::-webkit-details-marker]:hidden">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 text-lg font-semibold leading-snug text-petrole marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 focus-visible:ring-offset-creme sm:text-xl lg:p-6 lg:text-2xl [&::-webkit-details-marker]:hidden">
                     <h3 className="text-pretty">{q.question}</h3>
                     <Plus
-                      className="size-5 shrink-0 text-terracotta transition-transform duration-300 group-open:rotate-45"
+                      className="size-5 shrink-0 text-terracotta transition-transform duration-300 group-open:rotate-45 lg:size-6"
                       aria-hidden="true"
                     />
                   </summary>
-                  <div className="px-5 pb-5 text-pretty leading-relaxed text-petrole/85">
+                  <div className="px-5 pb-5 text-pretty leading-relaxed text-petrole/85 lg:px-6 lg:pb-6 lg:text-lg">
                     {q.reponse}
                   </div>
                 </details>

@@ -34,7 +34,8 @@
       "Bash(curl -s -o story_render.png \"https://www.figma.com/api/mcp/asset/369f5da4-0076-4061-b458-0128649dbc5b\")",
       "Bash(curl -s -o menu_render.png \"https://www.figma.com/api/mcp/asset/52236999-fae3-47ca-ac7b-10a57cf35a03\")",
       "Bash(awk '{print $5,$9}')",
-      "Bash(grep -iE '\\\\.\\(png|jpg|jpeg|webp\\)$')"
+      "Bash(grep -iE '\\\\.\\(png|jpg|jpeg|webp\\)$')",
+      "Bash(cd \"/c/Users/imran/OneDrive/Bureau/Le_bistrot\" && rm -f components/decor/AmbientGlow.tsx && echo \"supprimé\")"
     ]
   }
 }

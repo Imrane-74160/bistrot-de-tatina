@@ -5,7 +5,6 @@ import { Section } from '@/components/Section';
 import { MenuList } from '@/components/menu/MenuList';
 import { Button } from '@/components/Button';
 import { JsonLd } from '@/components/JsonLd';
-import { AmbientGlow } from '@/components/decor/AmbientGlow';
 import { StringLights } from '@/components/decor/StringLights';
 import { DecorObject } from '@/components/decor/DecorObject';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
@@ -37,7 +36,6 @@ export default function CartePage() {
       />
 
       <Section tone="creme" spacing="lg" className="isolate">
-        <AmbientGlow />
         <StringLights tone="light" className="mx-auto max-w-4xl" />
         {/* Objets décoratifs dans les marges (desktop) */}
         <DecorObject

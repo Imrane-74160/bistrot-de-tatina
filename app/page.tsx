@@ -9,6 +9,8 @@ import { UpcomingEvents } from '@/components/home/UpcomingEvents';
 import { GalleryPreview } from '@/components/home/GalleryPreview';
 import { FaqSection } from '@/components/FaqSection';
 import { ContactPreview } from '@/components/home/ContactPreview';
+import { Section } from '@/components/Section';
+import { AdhesionCta } from '@/components/AdhesionCta';
 
 export const metadata: Metadata = {
   description:
@@ -28,6 +30,10 @@ export default function HomePage() {
       {/* Aperçu « Événements » */} <UpcomingEvents />
       {/* Aperçu « Galerie » */} <GalleryPreview />
       {/* Questions fréquentes (SEO local) */} <FaqSection />
+      {/* CTA adhésion (page hors menu) */}
+      <Section tone="creme" spacing="lg">
+        <AdhesionCta variant="petrole" />
+      </Section>
       {/* Aperçu « Contact » */} <ContactPreview />
     </>
   );

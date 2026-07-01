@@ -5,7 +5,7 @@ import { Section } from '@/components/Section';
 import { SectionHeading } from '@/components/SectionHeading';
 import { EventCard } from '@/components/events/EventCard';
 import { JsonLd } from '@/components/JsonLd';
-import { AmbientGlow } from '@/components/decor/AmbientGlow';
+import { AdhesionCta } from '@/components/AdhesionCta';
 import { FloatingSparks } from '@/components/decor/FloatingSparks';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { getUpcomingEvents, getPastEvents } from '@/lib/events';
@@ -38,8 +38,7 @@ export default function EvenementsPage() {
         imageAlt="Service au bar pendant une soirée animée"
       />
 
-      <Section tone="creme" spacing="lg" className="isolate">
-        <AmbientGlow />
+      <Section tone="creme" spacing="lg">
         <SectionHeading
           eyebrow="À venir"
           title="Prochains rendez-vous"
@@ -91,6 +90,11 @@ export default function EvenementsPage() {
           </p>
         </Section>
       )}
+
+      {/* Devenir membre */}
+      <Section tone="creme" spacing="lg">
+        <AdhesionCta variant="petrole" />
+      </Section>
     </>
   );
 }

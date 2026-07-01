@@ -4,7 +4,6 @@ import { PageHero } from '@/components/PageHero';
 import { Section } from '@/components/Section';
 import { PreAdhesionForm } from '@/components/forms/PreAdhesionForm';
 import { JsonLd } from '@/components/JsonLd';
-import { AmbientGlow } from '@/components/decor/AmbientGlow';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { site } from '@/lib/site';
 
@@ -63,8 +62,7 @@ export default function AdhesionPage() {
         imageAlt="Le comptoir du bistrot et ses habitués"
       />
 
-      <Section tone="creme" spacing="lg" className="isolate">
-        <AmbientGlow />
+      <Section tone="creme" spacing="lg">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           {/* Explication */}
           <div className="flex flex-col gap-8">
