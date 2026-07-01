@@ -20,8 +20,8 @@ export function Footer() {
           </div>
           <p className="text-sm leading-relaxed text-creme/90">
             Bistrot associatif et solidaire à Meythet. On boit un verre, on
-            partage un moment — et tous les bénéfices vont à la lutte locale
-            contre le cancer.
+            partage un moment — et l'essentiel des bénéfices va à la lutte locale
+            contre le cancer, en mémoire de Tatie Nadia.
           </p>
           <div className="flex items-center gap-1">
             <a
@@ -61,6 +61,14 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/adhesion"
+                className="font-semibold text-jaune transition-colors hover:text-creme focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jaune"
+              >
+                Adhérer
+              </Link>
+            </li>
             <li>
               <a
                 href={itineraireUrl}

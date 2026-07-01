@@ -1,7 +1,7 @@
 {
   "nom": "Le Bistrot de Tatina",
   "baseline": "Boire un verre qui a du sens",
-  "description": "Bistrot associatif et solidaire à Meythet (Annecy), installé dans un ancien atelier de chaudronnerie. Tous nos bénéfices sont reversés à la lutte locale contre le cancer.",
+  "description": "Bistrot associatif et solidaire à Meythet (Annecy), installé dans un ancien atelier de chaudronnerie. L'essentiel de nos bénéfices est reversé à la lutte locale contre le cancer, en mémoire de Tatie Nadia.",
   "fondation": 2022,
   "adresse": {
     "rue": "2 allée des Morilles",
@@ -25,7 +25,14 @@
   "horairesTexte": "Jeudi & vendredi soir, dès 17h",
   "horairesNote": "TODO: à confirmer client — horaires définitifs et éventuelle ouverture estivale.",
   "capacite": "120 à 130 personnes + cour extérieure",
-  "cause": "Bénéfices intégralement reversés à la lutte locale contre le cancer : associations, hôpitaux, recherche et aide aux malades — notamment le cancer des ovaires.",
+  "cause": "L'essentiel des bénéfices est reversé à la lutte locale contre le cancer : associations, hôpitaux, recherche et aide aux malades — notamment le cancer des ovaires. Une petite trésorerie est conservée pour l'entretien et l'amélioration du lieu chaque année.",
+  "nomOrigine": "« Tatina » vient de « Tatie Nadia », la sœur de Samia, notre présidente. Proche de tous les bénévoles du départ, Nadia est partie d'un cancer quelques années avant l'ouverture : le bistrot est né en sa mémoire.",
+  "adhesion": {
+    "montant": "",
+    "duree": "Valable 1 an, renouvelable chaque année.",
+    "reglement": "Le règlement de l'adhésion se fait sur place, au bistrot.",
+    "_commentAdhesion": "TODO: renseigner le montant de l'adhésion (ex. « 10 € ») — laissé vide en attendant."
+  },
   "reseaux": {
     "instagram": "https://www.instagram.com/",
     "instagramHandle": "@bistrotdetatina",

@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/evenements',
     '/galerie',
     '/contact',
+    '/adhesion',
     '/mentions-legales',
   ].map((path) => ({
     url: `${SITE_URL}${path}`,

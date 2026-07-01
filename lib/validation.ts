@@ -28,3 +28,33 @@ export const contactSchema = z.object({
 });
 
 export type ContactInput = z.infer<typeof contactSchema>;
+
+export const adhesionSchema = z.object({
+  nom: z
+    .string()
+    .trim()
+    .min(2, 'Merci d’indiquer votre nom et prénom.')
+    .max(80, 'Nom trop long.'),
+  email: z.string().trim().email('Adresse e-mail invalide.').max(120),
+  telephone: z
+    .string()
+    .trim()
+    .max(30, 'Numéro trop long.')
+    .optional()
+    .or(z.literal('')),
+  message: z
+    .string()
+    .trim()
+    .max(1000, 'Message trop long.')
+    .optional()
+    .or(z.literal('')),
+  rgpd: z.literal(true, {
+    errorMap: () => ({
+      message: 'Vous devez accepter la politique de confidentialité.',
+    }),
+  }),
+  // Honeypot
+  website: honeypot,
+});
+
+export type AdhesionInput = z.infer<typeof adhesionSchema>;

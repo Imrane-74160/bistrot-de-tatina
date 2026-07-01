@@ -4,8 +4,8 @@ Site du **Bistrot de Tatina**, bistrot associatif et solidaire à Meythet (Annec
 Construit avec **Next.js 14 (App Router) + TypeScript + Tailwind CSS**.
 Tout le contenu est éditable sans toucher au code, dans le dossier [`/content`](./content).
 
-> Idée maîtresse : **« boire un verre qui a du sens »** — tous les bénéfices sont
-> reversés à la lutte locale contre le cancer.
+> Idée maîtresse : **« boire un verre qui a du sens »** — l'essentiel des bénéfices
+> est reversé à la lutte locale contre le cancer, en mémoire de Tatie Nadia.
 
 ---
 

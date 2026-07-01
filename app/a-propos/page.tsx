@@ -76,9 +76,21 @@ export default function AProposPage() {
               vendredi soir, à deux pas de Cran-Gevrier, d'Annecy-le-Vieux et de
               Seynod, loin de l'agitation et tout près de chez soi.
             </p>
-            <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/60">
-              TODO : récit complet de la famille à confirmer.
-            </p>
+
+            <div className="rounded-card border-l-4 border-terracotta bg-terracotta/[0.06] p-6">
+              <p className="flex items-center gap-2 font-display text-2xl uppercase leading-none text-petrole">
+                <Heart className="size-5 text-terracotta" aria-hidden="true" />
+                D'où vient le nom « Tatina » ?
+              </p>
+              <p className="mt-4 text-pretty text-lg leading-relaxed text-petrole/85">
+                « Tatina », c'est « <strong className="text-petrole">Tatie Nadia</strong> ».
+                Nadia était la sœur de Samia, la présidente de l'association, et une
+                proche de tous les bénévoles des débuts. Elle nous a quittés des
+                suites d'un cancer quelques années avant l'ouverture. Le bistrot est
+                né en sa mémoire — et c'est pour elle, et pour toutes celles et ceux
+                que la maladie touche, que chaque verre partagé compte.
+              </p>
+            </div>
           </div>
         </div>
       </Section>
@@ -96,18 +108,22 @@ export default function AProposPage() {
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-creme/90">
             Le Bistrot de Tatina est une association <strong className="text-creme">à but non
-            lucratif</strong>. Ici, on ne cherche pas le profit : tous les bénéfices
-            sont reversés à la <strong className="text-creme">lutte locale contre le
-            cancer</strong> — associations, hôpitaux, recherche et aide aux malades,
-            notamment autour du cancer des ovaires.
+            lucratif</strong>. Ici, on ne cherche pas le profit : <strong className="text-creme">l'essentiel
+            des bénéfices est reversé</strong> à la lutte locale contre le cancer —
+            associations, hôpitaux, recherche et aide aux malades, notamment autour
+            du cancer des ovaires.
           </p>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-creme/90">
-            Faire la fête fait le bien. La moindre voix compte, et chaque soirée
-            partagée à Annecy fait avancer une cause qui nous tient à cœur. En
-            soutenant des associations, des hôpitaux et la recherche en
-            Haute-Savoie, on garde notre engagement local et transparent : l'argent
-            récolté au comptoir reste au service de celles et ceux qui en ont besoin,
-            ici, près de chez nous.
+            Nous conservons juste une petite trésorerie pour faire vivre le lieu :
+            réparer le matériel et l'améliorer d'année en année. En 2026, par exemple,
+            nous avons installé un système de bâches sur la cour pour continuer à vous
+            accueillir lors des événements d'hiver, même sous une pluie légère.
+          </p>
+          <p className="mt-4 text-pretty text-lg leading-relaxed text-creme/90">
+            Et tout est transparent : chaque année, l'assemblée générale réunit les
+            adhérents, qui ont accès aux bilans et valident les dépenses comme les
+            dons. Faire la fête fait le bien, et chaque soirée partagée à Annecy fait
+            avancer une cause qui nous tient à cœur.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button href="/evenements" variant="jaune">
@@ -176,10 +192,10 @@ export default function AProposPage() {
               titleClassName="text-creme"
             />
             <p className="text-pretty text-lg leading-relaxed text-creme/90">
-              Un bar associatif repose sur l'adhésion : c'est ce qui nous permet
-              d'exister légalement et de reverser nos bénéfices à la cause.
-              Adhérer, c'est rejoindre une communauté et soutenir directement la
-              lutte contre le cancer.
+              Un bar associatif repose sur l'adhésion : c'est elle qui nous permet
+              d'exister légalement et de reverser nos bénéfices à la cause. Pour
+              faire partie de l'aventure, on devient membre — et on rejoint une
+              communauté qui soutient directement la lutte contre le cancer.
             </p>
             <ul className="flex flex-col gap-3 text-creme/90">
               <li className="flex items-start gap-3">
@@ -192,10 +208,16 @@ export default function AProposPage() {
               </li>
             </ul>
             <p className="text-creme/90">
-              L'adhésion se fait simplement sur place. Une question ? Écrivez-nous.
+              L'adhésion est <strong className="text-creme">valable un an, renouvelable</strong> chaque
+              année, et se règle sur place au bistrot. Pour gagner du temps, vous
+              pouvez pré-adhérer en ligne en quelques secondes : on prépare votre
+              fiche, il ne vous reste qu'à passer régler votre adhésion.
             </p>
-            <div>
-              <Button href="/contact" variant="jaune">
+            <div className="flex flex-wrap gap-3">
+              <Button href="/adhesion" variant="jaune">
+                Pré-adhérer en ligne
+              </Button>
+              <Button href="/contact" variant="outline-light">
                 Nous contacter
               </Button>
             </div>

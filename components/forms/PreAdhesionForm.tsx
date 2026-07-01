@@ -1,0 +1,161 @@
+'use client';
+
+import { useState } from 'react';
+import { UserPlus } from 'lucide-react';
+import { adhesionSchema } from '@/lib/validation';
+import { Label, FieldError, TextInput, TextArea, Honeypot, FormStatus } from './fields';
+import { cn } from '@/lib/utils';
+
+type Errors = Partial<Record<string, string>>;
+
+/** Formulaire de pré-adhésion : envoie une notification à l'association + une
+ * confirmation à la personne. Le règlement se finalise sur place au bistrot. */
+export function PreAdhesionForm() {
+  const [state, setState] = useState<'idle' | 'loading' | 'success' | 'error'>(
+    'idle',
+  );
+  const [errors, setErrors] = useState<Errors>({});
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+    const payload = { ...data, rgpd: data.rgpd === 'on' };
+
+    const parsed = adhesionSchema.safeParse(payload);
+    if (!parsed.success) {
+      const fieldErrors: Errors = {};
+      for (const [k, v] of Object.entries(parsed.error.flatten().fieldErrors)) {
+        if (v?.[0]) fieldErrors[k] = v[0];
+      }
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setErrors({});
+    setState('loading');
+    try {
+      const res = await fetch('/api/adhesion', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(parsed.data),
+      });
+      if (!res.ok) throw new Error('bad status');
+      setState('success');
+      form.reset();
+    } catch {
+      setState('error');
+    }
+  }
+
+  if (state === 'success') {
+    return (
+      <div className="rounded-card border-2 border-sauge/40 bg-sauge/10 p-6 text-petrole">
+        <p className="font-display text-2xl uppercase leading-none text-petrole">
+          Pré-adhésion enregistrée, merci ! 🎉
+        </p>
+        <p className="mt-3 text-pretty leading-relaxed text-petrole/85">
+          Vous allez recevoir un e-mail de confirmation. Il ne reste plus qu'à
+          régler votre adhésion sur place, lors de votre prochaine visite au
+          bistrot. À très vite !
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={onSubmit} noValidate className="flex flex-col gap-5">
+      <Honeypot />
+
+      <div className="flex flex-col gap-1.5">
+        <Label htmlFor="nom" required>
+          Nom et prénom
+        </Label>
+        <TextInput
+          id="nom"
+          name="nom"
+          autoComplete="name"
+          required
+          aria-invalid={!!errors.nom}
+          aria-describedby={errors.nom ? 'err-nom' : undefined}
+        />
+        <FieldError id="err-nom" message={errors.nom} />
+      </div>
+
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div className="flex flex-col gap-1.5">
+          <Label htmlFor="email" required>
+            E-mail
+          </Label>
+          <TextInput
+            id="email"
+            name="email"
+            type="email"
+            autoComplete="email"
+            required
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? 'err-email' : undefined}
+          />
+          <FieldError id="err-email" message={errors.email} />
+        </div>
+
+        <div className="flex flex-col gap-1.5">
+          <Label htmlFor="telephone">Téléphone</Label>
+          <TextInput
+            id="telephone"
+            name="telephone"
+            type="tel"
+            autoComplete="tel"
+            aria-invalid={!!errors.telephone}
+            aria-describedby={errors.telephone ? 'err-telephone' : undefined}
+          />
+          <FieldError id="err-telephone" message={errors.telephone} />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-1.5">
+        <Label htmlFor="message">Un mot pour l'équipe (facultatif)</Label>
+        <TextArea id="message" name="message" className="min-h-[100px]" />
+      </div>
+
+      <div className="flex flex-col gap-1.5">
+        <label className="flex items-start gap-3 text-sm text-petrole/85">
+          <input
+            type="checkbox"
+            name="rgpd"
+            required
+            className="mt-1 size-5 shrink-0 rounded border-2 border-petrole/30 text-terracotta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
+            aria-invalid={!!errors.rgpd}
+            aria-describedby={errors.rgpd ? 'err-rgpd' : undefined}
+          />
+          <span>
+            J'accepte que mes informations soient utilisées pour traiter ma
+            pré-adhésion, conformément à la{' '}
+            <a href="/mentions-legales#rgpd" className="font-semibold text-terracotta underline">
+              politique de confidentialité
+            </a>
+            . <span className="text-terracotta">*</span>
+          </span>
+        </label>
+        <FieldError id="err-rgpd" message={errors.rgpd} />
+      </div>
+
+      <FormStatus
+        state={state}
+        successMsg=""
+        errorMsg="L'envoi a échoué. Réessayez ou passez nous voir au bistrot."
+      />
+
+      <button
+        type="submit"
+        disabled={state === 'loading'}
+        className={cn(
+          'inline-flex min-h-[52px] items-center justify-center gap-2 rounded-pill bg-petrole px-8 font-mono text-sm font-bold uppercase tracking-[0.12em] text-jaune transition-all hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 disabled:opacity-60',
+        )}
+      >
+        <UserPlus className="size-4" aria-hidden="true" />
+        {state === 'loading' ? 'Envoi…' : 'Envoyer ma pré-adhésion'}
+      </button>
+    </form>
+  );
+}

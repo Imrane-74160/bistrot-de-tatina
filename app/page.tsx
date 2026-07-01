@@ -12,7 +12,7 @@ import { ContactPreview } from '@/components/home/ContactPreview';
 
 export const metadata: Metadata = {
   description:
-    'Bistrot associatif et solidaire à Meythet (Annecy), dans un ancien atelier de chaudronnerie. On boit un verre qui a du sens : tous les bénéfices vont à la lutte locale contre le cancer. Événements, carte locale, cour extérieure.',
+    'Bistrot associatif et solidaire à Meythet (Annecy), dans un ancien atelier de chaudronnerie. On boit un verre qui a du sens : l’essentiel des bénéfices va à la lutte locale contre le cancer. Événements, carte locale, cour extérieure.',
   alternates: { canonical: '/' },
 };
 
