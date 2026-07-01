@@ -40,21 +40,21 @@ export default function CartePage() {
         {/* Objets décoratifs dans les marges (desktop) */}
         <DecorObject
           src="/images/decor/planche-apero.png"
-          className="left-[3%] top-[9%] hidden w-36 [--rot:-7deg] xl:block 2xl:w-44"
+          className="left-[2%] top-[8%] hidden w-48 [--rot:-7deg] xl:block 2xl:w-60"
         />
         <DecorObject
           src="/images/decor/biere-brune.png"
-          className="right-[4%] top-[30%] hidden w-20 [--rot:9deg] xl:block 2xl:w-24"
+          className="right-[3%] top-[29%] hidden w-28 [--rot:9deg] xl:block 2xl:w-32"
           floatDelay="-1.5s"
         />
         <DecorObject
           src="/images/decor/biere-blonde.png"
-          className="left-[4%] bottom-[12%] hidden w-20 [--rot:-8deg] xl:block 2xl:w-24"
+          className="left-[3%] bottom-[12%] hidden w-28 [--rot:-8deg] xl:block 2xl:w-32"
           floatDelay="-3.5s"
         />
         <DecorObject
           src="/images/decor/biere-bouteille.png"
-          className="right-[5%] bottom-[16%] hidden w-14 [--rot:7deg] xl:block 2xl:w-16"
+          className="right-[4%] bottom-[15%] hidden w-20 [--rot:7deg] xl:block 2xl:w-24"
           floatDelay="-5s"
         />
         <div className="mx-auto max-w-3xl">

@@ -35,7 +35,7 @@ export function StorySection() {
             {/* Bidons décoratifs (collage — clin d'œil à l'atelier) */}
             <DecorObject
               src="/images/decor/bidons.png"
-              className="-bottom-10 -left-10 z-20 hidden w-32 [--rot:-4deg] sm:block lg:w-44"
+              className="-bottom-12 -left-12 z-20 hidden w-44 [--rot:-4deg] sm:block lg:w-56"
             />
           </Reveal>
 

@@ -70,11 +70,11 @@ export function MenuSection() {
             {/* Objets décoratifs (collage) */}
             <DecorObject
               src="/images/decor/planche-apero.png"
-              className="-right-5 -top-14 z-20 hidden w-32 [--rot:6deg] sm:block lg:w-44"
+              className="-right-8 -top-20 z-20 hidden w-44 [--rot:6deg] sm:block lg:w-60"
             />
             <DecorObject
               src="/images/decor/biere-blonde.png"
-              className="-right-3 -bottom-14 z-20 hidden w-16 [--rot:-9deg] sm:block lg:w-24"
+              className="-right-5 -bottom-16 z-20 hidden w-24 [--rot:-9deg] sm:block lg:w-32"
               floatDelay="-2.5s"
             />
           </Reveal>
