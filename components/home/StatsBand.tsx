@@ -1,6 +1,7 @@
 import { Sparkles } from 'lucide-react';
 import { Reveal } from '@/components/Reveal';
 import { CountUp } from '@/components/CountUp';
+import { AwningEdge } from '@/components/decor/AwningEdge';
 import { chiffresContent } from '@/lib/content';
 
 /**
@@ -10,7 +11,9 @@ import { chiffresContent } from '@/lib/content';
 export function StatsBand() {
   const { accroche, stats } = chiffresContent;
   return (
-    <section className="bg-jaune text-petrole" aria-labelledby="stats-titre">
+    <section className="relative bg-jaune text-petrole" aria-labelledby="stats-titre">
+      {/* Bord festonné d'auvent (bas du bandeau jaune) */}
+      <AwningEdge color="jaune" />
       <div className="container-bistrot py-14 text-center sm:py-16">
         <Reveal className="mb-10 flex items-center justify-center gap-2.5">
           <Sparkles className="size-5 shrink-0 text-terracotta" aria-hidden="true" />

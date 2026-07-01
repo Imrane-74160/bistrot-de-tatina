@@ -55,7 +55,11 @@ export function HeaderNav() {
             aria-label="Le Bistrot de Tatina — accueil"
             className="flex items-center justify-center rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
           >
-            <Logo size={68} priority className="h-[4.25rem] w-[4.25rem]" />
+            <Logo
+              size={68}
+              priority
+              className="h-[4.25rem] w-[4.25rem] transition-transform duration-300 hover:rotate-6"
+            />
           </Link>
         </li>
 

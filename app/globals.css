@@ -113,6 +113,27 @@
   }
 }
 
+/* ── Barre de défilement aux couleurs de la marque ──────────────────────────── */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(35 61 57) rgb(244 239 225);
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f4efe1;
+}
+::-webkit-scrollbar-thumb {
+  background: #233d39;
+  border-radius: 999px;
+  border: 3px solid #f4efe1;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c04a2e;
+}
+
 /* ── Badge logo animé (composant AnimatedBadge) ─────────────────────────────── */
 .tatina-badge--animated {
   animation: tatina-spin 28s linear infinite;

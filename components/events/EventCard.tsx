@@ -67,7 +67,7 @@ export function EventCard({
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
         />
-        <div className="absolute left-4 top-4 flex h-16 w-16 flex-col items-center justify-center rounded-2xl bg-jaune text-petrole shadow-card">
+        <div className="absolute left-4 top-4 flex h-16 w-16 -rotate-3 flex-col items-center justify-center rounded-2xl bg-jaune text-petrole shadow-card ring-2 ring-creme/90 transition-transform duration-300 group-hover:rotate-0">
           <span className="font-display text-3xl leading-none">{jour}</span>
           <span className="font-mono text-[0.65rem] font-bold uppercase tracking-wider">
             {mois}

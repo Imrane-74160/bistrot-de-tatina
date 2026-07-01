@@ -1,12 +1,15 @@
 import Link from 'next/link';
 import { Instagram, Phone, MapPin, Clock, Navigation } from 'lucide-react';
 import { Logo } from '@/components/Logo';
+import { StringLights } from '@/components/decor/StringLights';
 import { site, adresseLigne, itineraireUrl, navLinks } from '@/lib/site';
 
 /** Pied de page (§5) : infos pratiques, réseaux, plan du site, liens légaux. */
 export function Footer() {
   return (
-    <footer className="bg-petrole text-creme">
+    <footer className="relative bg-petrole text-creme">
+      {/* Guirlande guinguette au sommet du pied de page */}
+      <StringLights tone="dark" />
       <div className="container-bistrot grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
         {/* Marque + cause */}
         <div className="flex flex-col gap-4 lg:col-span-1">
@@ -141,7 +144,14 @@ export function Footer() {
         </nav>
       </div>
 
-      <div className="border-t border-creme/10">
+      {/* Wordmark géant décoratif, coupé par la barre de copyright (éditorial) */}
+      <div aria-hidden="true" className="overflow-hidden">
+        <p className="translate-y-[22%] select-none whitespace-nowrap text-center font-display text-[clamp(3.5rem,11vw,10rem)] uppercase leading-none tracking-tight text-creme/10">
+          Le Bistrot de Tatina
+        </p>
+      </div>
+
+      <div className="relative border-t border-creme/10 bg-petrole">
         <div className="container-bistrot flex flex-col items-center justify-between gap-2 py-6 text-center text-xs text-creme/85 sm:flex-row sm:text-left">
           <p>
             © {new Date().getFullYear()} {site.nom} — Association à but non

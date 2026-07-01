@@ -3,6 +3,7 @@ import { Logo } from '@/components/Logo';
 import { HeaderNav } from '@/components/layout/HeaderNav';
 import { MobileNav } from '@/components/layout/MobileNav';
 import { UtilityBar } from '@/components/layout/UtilityBar';
+import { AwningEdge } from '@/components/decor/AwningEdge';
 
 /**
  * En-tête (§4.2) : barre utilitaire + nav logo-centré.
@@ -13,6 +14,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40">
       <UtilityBar />
+      {/* Bord festonné « store de café » suspendu sous le header */}
+      <AwningEdge color="creme" />
       <div className="border-b border-petrole/10 bg-creme/95 backdrop-blur supports-[backdrop-filter]:bg-creme/80">
         <div className="container-bistrot flex h-20 items-center justify-between">
           {/* Desktop : nav complète (3 · logo · 3) répartie uniformément */}

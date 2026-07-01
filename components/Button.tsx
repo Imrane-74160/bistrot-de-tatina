@@ -4,19 +4,19 @@ import { cn } from '@/lib/utils';
 
 // Boutons « pilule » (§3.3) — cibles ≥ 44px (a11y)
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 rounded-pill font-mono text-sm font-bold uppercase tracking-[0.12em] transition-all duration-200 disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 focus-visible:ring-offset-creme [&_svg]:size-[1.15em] [&_svg]:shrink-0',
+  'inline-flex items-center justify-center gap-2 rounded-pill font-mono text-sm font-bold uppercase tracking-[0.12em] transition-all duration-200 active:translate-y-0 active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 focus-visible:ring-offset-creme [&_svg]:size-[1.15em] [&_svg]:shrink-0',
   {
     variants: {
       variant: {
         // Fond pétrole, texte jaune (signature §3.3)
         petrole:
-          'bg-petrole text-jaune hover:bg-petrole/90 hover:-translate-y-0.5 shadow-card',
+          'bg-petrole text-jaune hover:bg-petrole/90 hover:-translate-y-0.5 shadow-card hover:shadow-overlap',
         // Fond jaune, texte pétrole foncé (jamais de texte clair sur jaune §3.3)
         jaune:
-          'bg-jaune text-petrole hover:bg-jaune/90 hover:-translate-y-0.5 shadow-card',
+          'bg-jaune text-petrole hover:bg-jaune/90 hover:-translate-y-0.5 shadow-card hover:shadow-overlap',
         // Accent terracotta
         terracotta:
-          'bg-terracotta text-creme hover:bg-terracotta/90 hover:-translate-y-0.5 shadow-card',
+          'bg-terracotta text-creme hover:bg-terracotta/90 hover:-translate-y-0.5 shadow-card hover:shadow-overlap',
         // Contour fin (sur fond clair)
         outline:
           'border-2 border-petrole/30 text-petrole hover:border-petrole hover:bg-petrole hover:text-creme',
