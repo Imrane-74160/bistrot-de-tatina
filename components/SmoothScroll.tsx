@@ -14,6 +14,10 @@ export function SmoothScroll() {
   const pathname = usePathname();
 
   useEffect(() => {
+    // On pilote nous-mêmes la position : on empêche la restauration du navigateur.
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const lenis = new Lenis({
@@ -38,12 +42,27 @@ export function SmoothScroll() {
 
   // Au changement de page : repartir du haut (sauf si on vise une ancre #...).
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.location.hash) return;
-    if (lenisRef.current) {
-      lenisRef.current.scrollTo(0, { immediate: true, force: true });
-    } else {
+    if (window.location.hash) return;
+
+    const toTop = () => {
+      const lenis = lenisRef.current;
+      if (lenis) {
+        // Recalcule la hauteur de la nouvelle page puis remet l'état interne à 0,
+        // sinon Lenis « réécrit » l'ancienne position au frame suivant.
+        lenis.resize();
+        lenis.scrollTo(0, { immediate: true, force: true });
+      }
       window.scrollTo(0, 0);
-    }
+    };
+
+    // Immédiat + après le rendu/layout de la nouvelle page (2 frames de sécurité).
+    toTop();
+    const r1 = requestAnimationFrame(toTop);
+    const r2 = requestAnimationFrame(() => requestAnimationFrame(toTop));
+    return () => {
+      cancelAnimationFrame(r1);
+      cancelAnimationFrame(r2);
+    };
   }, [pathname]);
 
   return null;
