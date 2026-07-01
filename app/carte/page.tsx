@@ -43,19 +43,19 @@ export default function CartePage() {
           className="left-[2%] top-[8%] hidden w-48 [--rot:-7deg] xl:block 2xl:w-60"
         />
         <DecorObject
+          src="/images/decor/biere-bouteille.png"
+          className="right-[3%] top-[12%] hidden w-24 [--rot:8deg] xl:block 2xl:w-32"
+          floatDelay="-5s"
+        />
+        <DecorObject
           src="/images/decor/biere-brune.png"
-          className="right-[3%] top-[29%] hidden w-28 [--rot:9deg] xl:block 2xl:w-32"
+          className="right-[4%] bottom-[15%] hidden w-28 [--rot:9deg] xl:block 2xl:w-32"
           floatDelay="-1.5s"
         />
         <DecorObject
           src="/images/decor/biere-blonde.png"
-          className="left-[3%] bottom-[12%] hidden w-28 [--rot:-8deg] xl:block 2xl:w-32"
+          className="left-[3%] bottom-[12%] hidden w-36 [--rot:-8deg] xl:block 2xl:w-44"
           floatDelay="-3.5s"
-        />
-        <DecorObject
-          src="/images/decor/biere-bouteille.png"
-          className="right-[4%] bottom-[15%] hidden w-20 [--rot:7deg] xl:block 2xl:w-24"
-          floatDelay="-5s"
         />
         <div className="mx-auto max-w-3xl">
           <p className="mb-6 flex items-center gap-2 rounded-pill bg-sauge/10 px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.12em] text-petrole">
