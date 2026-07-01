@@ -33,7 +33,8 @@
       "Bash(grep -oE 'id=\\\\\\\\\"[0-9:]+\\\\\\\\\" name=\\\\\\\\\"[^\\\\\\\\]{0,40}\\\\\\\\\"' /c/Users/imran/.claude/projects/C--Users-imran-OneDrive-Bureau-Le-bistrot/e7036aac-c43e-4f5c-84c4-bba13ee20956/tool-results/mcp-9bf3da61-57c2-4921-905d-eeddb0198215-get_metadata-1782915206268.txt)",
       "Bash(curl -s -o story_render.png \"https://www.figma.com/api/mcp/asset/369f5da4-0076-4061-b458-0128649dbc5b\")",
       "Bash(curl -s -o menu_render.png \"https://www.figma.com/api/mcp/asset/52236999-fae3-47ca-ac7b-10a57cf35a03\")",
-      "Bash(awk '{print $5,$9}')"
+      "Bash(awk '{print $5,$9}')",
+      "Bash(grep -iE '\\\\.\\(png|jpg|jpeg|webp\\)$')"
     ]
   }
 }

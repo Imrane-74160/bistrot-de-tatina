@@ -3,6 +3,7 @@ import { Button } from '@/components/Button';
 import { SectionHeading } from '@/components/SectionHeading';
 import { EventCard } from '@/components/events/EventCard';
 import { Reveal } from '@/components/Reveal';
+import { DecorObject } from '@/components/decor/DecorObject';
 import { getUpcomingEvents } from '@/lib/events';
 
 /** « Prochains événements » (§4.10) — 3 cartes depuis l'agenda. */
@@ -19,10 +20,18 @@ export function UpcomingEvents() {
             title="Prochains rendez-vous"
             as="h2"
           />
-          <Button href="/evenements" variant="outline" className="shrink-0">
-            Tout l'agenda
-            <ArrowRight aria-hidden="true" />
-          </Button>
+          <div className="relative shrink-0">
+            {/* Flèche dessinée qui pointe vers le bouton (desktop) */}
+            <DecorObject
+              src="/images/decor/fleche.png"
+              float={false}
+              className="absolute -left-24 top-1/2 hidden w-20 -translate-y-1/2 rotate-[8deg] drop-shadow-none lg:block"
+            />
+            <Button href="/evenements" variant="outline">
+              Tout l'agenda
+              <ArrowRight aria-hidden="true" />
+            </Button>
+          </div>
         </div>
 
         {events.length > 0 ? (

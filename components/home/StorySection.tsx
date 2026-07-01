@@ -32,10 +32,10 @@ export function StorySection() {
                 />
               </div>
             </OverlapCard>
-            {/* Shaker décoratif (collage) */}
+            {/* Bidons décoratifs (collage — clin d'œil à l'atelier) */}
             <DecorObject
-              src="/images/decor/shaker.png"
-              className="-bottom-9 -left-5 z-20 hidden w-14 [--rot:-12deg] sm:block lg:w-16"
+              src="/images/decor/bidons.png"
+              className="-bottom-10 -left-10 z-20 hidden w-32 [--rot:-4deg] sm:block lg:w-44"
             />
           </Reveal>
 
