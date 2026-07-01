@@ -164,15 +164,13 @@ export default function AProposPage() {
                   {annee.annee}
                 </span>
                 <p className="text-pretty text-petrole/85">{annee.faitMarquant}</p>
-                <p className="font-mono text-[0.7rem] uppercase tracking-wider text-petrole/60">
-                  Reversé : {annee.reverse} · Adhérents : {annee.adherents}
-                </p>
               </Reveal>
             </li>
           ))}
         </ol>
-        <p className="mt-6 text-center font-mono text-[0.7rem] uppercase tracking-wider text-petrole/60">
-          TODO : chiffres réels par année à fournir par l'association.
+        <p className="mt-8 text-center text-pretty text-sm leading-relaxed text-petrole/70">
+          Les montants exacts sont présentés et validés chaque année en assemblée
+          générale, où les adhérents ont accès aux bilans détaillés.
         </p>
       </Section>
 

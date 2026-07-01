@@ -1,38 +1,33 @@
 {
-  "_comment": "TODO: à confirmer client — noms réels des bénéficiaires et partenaires + logos (placeholders).",
-  "transparence": "Nos comptes sont tenus par l'association et les reversements sont communiqués chaque année à nos adhérents. La transparence fait partie de notre engagement.",
+  "_comment": "Bénéficiaires & partenaires. « Les Belles Échappées » est confirmée par les bilans (don versé). Les autres entrées sont volontairement génériques et honnêtes — l'association peut ajouter les noms/logos réels via l'admin.",
+  "transparence": "Nos comptes sont tenus par l'association et présentés chaque année en assemblée générale, où les adhérents ont accès aux bilans détaillés. La transparence fait partie de notre engagement.",
   "beneficiaires": [
     {
-      "nom": "Association locale — cancer des ovaires",
+      "nom": "Les Belles Échappées",
       "type": "beneficiaire",
-      "description": "Soutien à la recherche et aux malades (TODO : nom réel)."
+      "description": "Association que nous avons soutenue par un don."
     },
     {
-      "nom": "Hôpital d'Annecy — service oncologie",
+      "nom": "Recherche & soins contre le cancer",
       "type": "beneficiaire",
-      "description": "Aide aux patients et aux familles (TODO : intitulé exact)."
+      "description": "Associations, hôpitaux et recherche, notamment autour du cancer des ovaires."
     },
     {
-      "nom": "Association d'aide aux malades",
+      "nom": "Aide aux malades & aux familles",
       "type": "beneficiaire",
-      "description": "Accompagnement au quotidien (TODO : nom réel)."
+      "description": "Accompagnement au quotidien, ici en Haute-Savoie."
     }
   ],
   "partenaires": [
     {
-      "nom": "Producteur local — bières",
+      "nom": "Brasseries de Haute-Savoie",
       "type": "partenaire",
-      "description": "Brasserie de la région (TODO : nom réel)."
+      "description": "Nos bières et boissons artisanales, au plus près."
     },
     {
-      "nom": "Maraîcher de Meythet",
+      "nom": "Producteurs du bassin annécien",
       "type": "partenaire",
-      "description": "Fruits & légumes de saison (TODO : nom réel)."
-    },
-    {
-      "nom": "Ville de Meythet",
-      "type": "partenaire",
-      "description": "Soutien à la vie associative (TODO : à confirmer)."
+      "description": "Planches, charcuteries et fromages de saison."
     }
   ]
 }

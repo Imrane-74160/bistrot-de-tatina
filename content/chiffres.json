@@ -1,30 +1,24 @@
 {
-  "_comment": "TODO: à confirmer client — chiffres réels d'impact. Placeholders réalistes en attendant.",
+  "_comment": "Chiffres d'impact. Le montant reversé est une estimation PRUDENTE (borne basse) tirée des bilans 23/24, 24/25, 25/26 (~10-12 k€/an) — à confirmer/arrondir par l'association. Les autres chiffres sont des faits (ouverture 2022, capacité ~130).",
   "accroche": "Depuis 2022, chaque verre partagé fait avancer une cause.",
   "stats": [
-    { "valeur": "12", "suffixe": "k€", "label": "Reversés à la cause" },
-    { "valeur": "350", "suffixe": "+", "label": "Adhérents fidèles" },
-    { "valeur": "40", "suffixe": "+", "label": "Soirées par an" },
-    { "valeur": "3", "label": "Associations soutenues" }
+    { "valeur": "30", "suffixe": "k€+", "label": "Reversés à la cause" },
+    { "valeur": "4", "suffixe": "ans", "label": "D'aventure solidaire" },
+    { "valeur": "130", "label": "Convives sous un même toit" },
+    { "valeur": "2", "suffixe": "soirs", "label": "De rendez-vous par semaine" }
   ],
   "parAnnee": [
     {
       "annee": 2022,
-      "reverse": "TODO",
-      "adherents": "TODO",
-      "faitMarquant": "Ouverture du bistrot dans l'ancien atelier de chaudronnerie."
-    },
-    {
-      "annee": 2023,
-      "reverse": "TODO",
-      "adherents": "TODO",
-      "faitMarquant": "Premiers reversements aux associations locales."
+      "faitMarquant": "Ouverture du bistrot dans l'ancien atelier de chaudronnerie, en mémoire de Tatie Nadia."
     },
     {
       "annee": 2024,
-      "reverse": "TODO",
-      "adherents": "TODO",
-      "faitMarquant": "Aménagement de la cour extérieure et nouveaux rendez-vous."
+      "faitMarquant": "Premiers reversements aux associations locales de lutte contre le cancer (dont Les Belles Échappées, le Cinéma le Parnal…)."
+    },
+    {
+      "annee": 2026,
+      "faitMarquant": "Une cour couverte grâce à un système de bâches, pour continuer à accueillir même l'hiver."
     }
   ]
 }

@@ -151,6 +151,14 @@ collections:
           - { name: "horairesNote", label: "Note horaires", widget: "string", required: false }
           - { name: "capacite", label: "Capacité", widget: "string" }
           - { name: "cause", label: "La cause (texte)", widget: "text" }
+          - { name: "nomOrigine", label: "Origine du nom (Tatie Nadia)", widget: "text", required: false }
+          - name: "adhesion"
+            label: "Adhésion"
+            widget: "object"
+            fields:
+              - { name: "montant", label: "Montant (ex. « 15 € »)", widget: "string", required: false }
+              - { name: "duree", label: "Durée", widget: "string", required: false }
+              - { name: "reglement", label: "Règlement", widget: "string", required: false }
           - name: "reseaux"
             label: "Réseaux sociaux"
             widget: "object"
@@ -179,8 +187,6 @@ collections:
             summary: "{{fields.annee}}"
             fields:
               - { name: "annee", label: "Année", widget: "number", value_type: "int" }
-              - { name: "reverse", label: "Montant reversé", widget: "string" }
-              - { name: "adherents", label: "Adhérents", widget: "string" }
               - { name: "faitMarquant", label: "Fait marquant", widget: "text" }
 
       # PARTENAIRES & BÉNÉFICIAIRES

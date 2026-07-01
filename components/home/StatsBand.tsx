@@ -53,7 +53,7 @@ export function StatsBand() {
         </dl>
 
         <p className="mt-10 font-mono text-[0.7rem] uppercase tracking-wider text-petrole/80">
-          TODO : chiffres à confirmer avec l'association.
+          Comptes validés chaque année en assemblée générale
         </p>
       </div>
     </section>
