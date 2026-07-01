@@ -54,6 +54,11 @@ export default function CartePage() {
           className="left-[4%] bottom-[12%] hidden w-20 [--rot:-8deg] xl:block 2xl:w-24"
           floatDelay="-3.5s"
         />
+        <DecorObject
+          src="/images/decor/biere-bouteille.png"
+          className="right-[5%] bottom-[16%] hidden w-14 [--rot:7deg] xl:block 2xl:w-16"
+          floatDelay="-5s"
+        />
         <div className="mx-auto max-w-3xl">
           <p className="mb-6 flex items-center gap-2 rounded-pill bg-sauge/10 px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.12em] text-petrole">
             <Leaf className="size-4 text-sauge" aria-hidden="true" />
