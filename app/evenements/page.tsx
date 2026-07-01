@@ -5,6 +5,8 @@ import { Section } from '@/components/Section';
 import { SectionHeading } from '@/components/SectionHeading';
 import { EventCard } from '@/components/events/EventCard';
 import { JsonLd } from '@/components/JsonLd';
+import { AmbientGlow } from '@/components/decor/AmbientGlow';
+import { FloatingSparks } from '@/components/decor/FloatingSparks';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { getUpcomingEvents, getPastEvents } from '@/lib/events';
 
@@ -36,7 +38,8 @@ export default function EvenementsPage() {
         imageAlt="Service au bar pendant une soirée animée"
       />
 
-      <Section tone="creme" spacing="lg">
+      <Section tone="creme" spacing="lg" className="isolate">
+        <AmbientGlow />
         <SectionHeading
           eyebrow="À venir"
           title="Prochains rendez-vous"
@@ -67,7 +70,8 @@ export default function EvenementsPage() {
       </Section>
 
       {past.length > 0 && (
-        <Section tone="petrole" spacing="lg">
+        <Section tone="petrole" spacing="lg" className="isolate">
+          <FloatingSparks />
           <SectionHeading
             eyebrow="C'était au bistrot"
             title="Événements passés"

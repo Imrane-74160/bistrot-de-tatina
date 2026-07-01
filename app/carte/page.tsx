@@ -5,6 +5,8 @@ import { Section } from '@/components/Section';
 import { MenuList } from '@/components/menu/MenuList';
 import { Button } from '@/components/Button';
 import { JsonLd } from '@/components/JsonLd';
+import { AmbientGlow } from '@/components/decor/AmbientGlow';
+import { StringLights } from '@/components/decor/StringLights';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { carteContent } from '@/lib/content';
 
@@ -33,7 +35,9 @@ export default function CartePage() {
         imageAlt="L'ardoise de la carte écrite à la craie"
       />
 
-      <Section tone="creme" spacing="lg">
+      <Section tone="creme" spacing="lg" className="isolate">
+        <AmbientGlow />
+        <StringLights tone="light" className="mx-auto max-w-4xl" />
         <div className="mx-auto max-w-3xl">
           <p className="mb-6 flex items-center gap-2 rounded-pill bg-sauge/10 px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.12em] text-petrole">
             <Leaf className="size-4 text-sauge" aria-hidden="true" />

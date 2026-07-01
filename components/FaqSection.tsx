@@ -3,6 +3,7 @@ import { Section } from '@/components/Section';
 import { SectionHeading } from '@/components/SectionHeading';
 import { Reveal } from '@/components/Reveal';
 import { JsonLd } from '@/components/JsonLd';
+import { StringLights } from '@/components/decor/StringLights';
 import { faqJsonLd } from '@/lib/seo';
 import { faqContent } from '@/lib/content';
 
@@ -16,6 +17,7 @@ export function FaqSection() {
   return (
     <Section tone="creme" spacing="lg" aria-labelledby="faq-titre">
       <JsonLd data={faqJsonLd(questions)} />
+      <StringLights tone="light" className="mx-auto max-w-5xl" />
       <div className="mx-auto max-w-3xl">
         <SectionHeading
           id="faq-titre"

@@ -10,6 +10,9 @@ import { StatsBand } from '@/components/home/StatsBand';
 import { Partners } from '@/components/home/Partners';
 import { Reveal } from '@/components/Reveal';
 import { JsonLd } from '@/components/JsonLd';
+import { AmbientGlow } from '@/components/decor/AmbientGlow';
+import { StringLights } from '@/components/decor/StringLights';
+import { FloatingSparks } from '@/components/decor/FloatingSparks';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { chiffresContent } from '@/lib/content';
 
@@ -39,7 +42,8 @@ export default function AProposPage() {
       />
 
       {/* Histoire + lieu */}
-      <Section tone="creme" spacing="lg">
+      <Section tone="creme" spacing="lg" className="isolate">
+        <AmbientGlow />
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <OverlapCard className="ring-1 ring-petrole/10">
             <div className="relative aspect-[4/3] w-full">
@@ -81,6 +85,7 @@ export default function AProposPage() {
 
       {/* La cause */}
       <Section tone="petrole" spacing="lg" id="la-cause">
+        <StringLights tone="dark" className="mx-auto max-w-4xl" />
         <div className="mx-auto max-w-3xl text-center">
           <span className="mb-5 inline-flex items-center gap-2 rounded-pill bg-jaune px-4 py-1.5 font-mono text-xs font-bold uppercase tracking-[0.14em] text-petrole">
             <Heart className="size-4" aria-hidden="true" />
@@ -159,7 +164,8 @@ export default function AProposPage() {
       <Partners />
 
       {/* Pourquoi adhérer */}
-      <Section tone="petrole" spacing="lg">
+      <Section tone="petrole" spacing="lg" className="isolate">
+        <FloatingSparks />
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col gap-5">
             <SectionHeading

@@ -1,6 +1,7 @@
 import { Button } from '@/components/Button';
 import { AnimatedBadge } from '@/components/AnimatedBadge';
 import { Reveal } from '@/components/Reveal';
+import { AmbientGlow } from '@/components/decor/AmbientGlow';
 import { homeContent } from '@/lib/content';
 
 /**
@@ -11,8 +12,9 @@ import { homeContent } from '@/lib/content';
 export function IntroBlock() {
   const { intro } = homeContent;
   return (
-    <section id="intro" className="relative bg-creme pb-28 pt-16 sm:pt-20 lg:pb-32 lg:pt-24">
-      <div className="container-bistrot">
+    <section id="intro" className="relative isolate bg-creme pb-28 pt-16 sm:pt-20 lg:pb-32 lg:pt-24">
+      <AmbientGlow />
+      <div className="container-bistrot relative z-10">
         <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-16">
           {/* Titre */}
           <Reveal>

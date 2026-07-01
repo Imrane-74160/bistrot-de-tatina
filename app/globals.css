@@ -250,6 +250,70 @@ html.lenis body {
   }
 }
 
+/* ── Décor premium inspiré du logo (guirlande, halos, étincelles) ───────────── */
+/* Scintillement d'ampoule réutilisable (même clignotement que le badge). */
+.tatina-twinkle {
+  animation: tatina-twinkle 2.6s ease-in-out infinite;
+}
+
+/* Léger balancement de la guirlande (vent). */
+.tatina-sway {
+  transform-origin: top center;
+  animation: tatina-sway 7s ease-in-out infinite;
+}
+@keyframes tatina-sway {
+  0%,
+  100% {
+    transform: rotate(-0.7deg);
+  }
+  50% {
+    transform: rotate(0.7deg);
+  }
+}
+
+/* Halos ambiants qui dérivent lentement (profondeur). */
+.tatina-glow-orb {
+  animation: tatina-drift 18s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes tatina-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(22px, -16px, 0) scale(1.1);
+  }
+}
+
+/* Étincelles qui montent et scintillent. */
+.tatina-spark {
+  animation: tatina-spark 5.5s ease-in-out infinite;
+}
+@keyframes tatina-spark {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.6);
+  }
+  25%,
+  70% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tatina-twinkle,
+  .tatina-sway,
+  .tatina-glow-orb,
+  .tatina-spark {
+    animation: none !important;
+  }
+}
+
 /* ── Hero cinématique : parallaxe souris + révélation du titre par balayage ──── */
 .hero-parallax {
   position: absolute;

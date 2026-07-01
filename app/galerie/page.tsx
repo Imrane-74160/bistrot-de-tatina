@@ -4,6 +4,8 @@ import { Section } from '@/components/Section';
 import { Gallery } from '@/components/gallery/Gallery';
 import { SectionHeading } from '@/components/SectionHeading';
 import { JsonLd } from '@/components/JsonLd';
+import { AmbientGlow } from '@/components/decor/AmbientGlow';
+import { StringLights } from '@/components/decor/StringLights';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
@@ -31,7 +33,9 @@ export default function GaleriePage() {
         imageAlt="La cour et sa pergola végétalisée"
       />
 
-      <Section tone="creme" spacing="lg">
+      <Section tone="creme" spacing="lg" className="isolate">
+        <AmbientGlow />
+        <StringLights tone="light" className="mx-auto max-w-4xl" />
         <SectionHeading
           eyebrow="L'ambiance en photos"
           title="Bienvenue chez nous"

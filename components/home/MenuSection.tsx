@@ -4,6 +4,7 @@ import { Button } from '@/components/Button';
 import { SectionHeading } from '@/components/SectionHeading';
 import { Reveal } from '@/components/Reveal';
 import { Spotlight } from '@/components/Spotlight';
+import { FloatingSparks } from '@/components/decor/FloatingSparks';
 import { homeContent } from '@/lib/content';
 
 /** « La carte » façon « FOOD & EATS » (§4.7) — pétrole sombre, texte + horaires + photos. */
@@ -11,10 +12,11 @@ export function MenuSection() {
   const { menu } = homeContent;
   return (
     <section
-      className="relative bg-petrole text-creme"
+      className="relative isolate bg-petrole text-creme"
       aria-labelledby="menu-titre"
     >
       <Spotlight />
+      <FloatingSparks />
       <div className="container-bistrot relative z-10 border-t border-creme/10 py-16 sm:py-20 lg:py-28">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Texte */}
