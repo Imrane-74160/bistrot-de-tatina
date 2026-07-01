@@ -7,6 +7,7 @@ import { Button } from '@/components/Button';
 import { JsonLd } from '@/components/JsonLd';
 import { AmbientGlow } from '@/components/decor/AmbientGlow';
 import { StringLights } from '@/components/decor/StringLights';
+import { DecorObject } from '@/components/decor/DecorObject';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { carteContent } from '@/lib/content';
 
@@ -38,6 +39,21 @@ export default function CartePage() {
       <Section tone="creme" spacing="lg" className="isolate">
         <AmbientGlow />
         <StringLights tone="light" className="mx-auto max-w-4xl" />
+        {/* Objets décoratifs dans les marges (desktop) */}
+        <DecorObject
+          src="/images/decor/planche-apero.png"
+          className="left-[3%] top-[9%] hidden w-36 [--rot:-7deg] xl:block 2xl:w-44"
+        />
+        <DecorObject
+          src="/images/decor/biere-brune.png"
+          className="right-[4%] top-[30%] hidden w-20 [--rot:9deg] xl:block 2xl:w-24"
+          floatDelay="-1.5s"
+        />
+        <DecorObject
+          src="/images/decor/biere-blonde.png"
+          className="left-[4%] bottom-[12%] hidden w-20 [--rot:-8deg] xl:block 2xl:w-24"
+          floatDelay="-3.5s"
+        />
         <div className="mx-auto max-w-3xl">
           <p className="mb-6 flex items-center gap-2 rounded-pill bg-sauge/10 px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.12em] text-petrole">
             <Leaf className="size-4 text-sauge" aria-hidden="true" />

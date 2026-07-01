@@ -5,6 +5,7 @@ import { OverlapCard } from '@/components/OverlapCard';
 import { Reveal } from '@/components/Reveal';
 import { Spotlight } from '@/components/Spotlight';
 import { StringLights } from '@/components/decor/StringLights';
+import { DecorObject } from '@/components/decor/DecorObject';
 import { homeContent } from '@/lib/content';
 
 /** « Notre histoire » (§4.6) — section pétrole sombre, photo + texte. */
@@ -19,7 +20,7 @@ export function StorySection() {
       <StringLights tone="dark" />
       <div className="container-bistrot relative z-10 py-16 sm:py-20 lg:py-28">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <Reveal variant="zoom" className="order-1">
+          <Reveal variant="zoom" className="relative order-1">
             <OverlapCard className="ring-1 ring-creme/10">
               <div className="relative aspect-[4/3] w-full">
                 <Image
@@ -31,6 +32,11 @@ export function StorySection() {
                 />
               </div>
             </OverlapCard>
+            {/* Shaker décoratif (collage) */}
+            <DecorObject
+              src="/images/decor/shaker.png"
+              className="-bottom-9 -left-5 z-20 hidden w-14 [--rot:-12deg] sm:block lg:w-16"
+            />
           </Reveal>
 
           <div className="order-2 flex flex-col gap-6">

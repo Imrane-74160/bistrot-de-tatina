@@ -5,6 +5,7 @@ import { SectionHeading } from '@/components/SectionHeading';
 import { Reveal } from '@/components/Reveal';
 import { Spotlight } from '@/components/Spotlight';
 import { FloatingSparks } from '@/components/decor/FloatingSparks';
+import { DecorObject } from '@/components/decor/DecorObject';
 import { homeContent } from '@/lib/content';
 
 /** « La carte » façon « FOOD & EATS » (§4.7) — pétrole sombre, texte + horaires + photos. */
@@ -65,6 +66,17 @@ export function MenuSection() {
                 />
               </div>
             </div>
+
+            {/* Objets décoratifs (collage) */}
+            <DecorObject
+              src="/images/decor/planche-apero.png"
+              className="-right-5 -top-14 z-20 hidden w-32 [--rot:6deg] sm:block lg:w-44"
+            />
+            <DecorObject
+              src="/images/decor/biere-blonde.png"
+              className="-right-3 -bottom-14 z-20 hidden w-16 [--rot:-9deg] sm:block lg:w-24"
+              floatDelay="-2.5s"
+            />
           </Reveal>
         </div>
       </div>
