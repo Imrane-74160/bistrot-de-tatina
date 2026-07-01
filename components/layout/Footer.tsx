@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Instagram, Facebook, Phone, MapPin, Clock, Navigation } from 'lucide-react';
+import { Instagram, Phone, MapPin, Clock, Navigation } from 'lucide-react';
 import { Logo } from '@/components/Logo';
 import { site, adresseLigne, itineraireUrl, navLinks } from '@/lib/site';
 
@@ -32,15 +32,6 @@ export function Footer() {
               aria-label="Instagram (nouvel onglet)"
             >
               <Instagram className="size-5" aria-hidden="true" />
-            </a>
-            <a
-              href={site.reseaux.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-creme/10 text-creme transition-colors hover:bg-jaune hover:text-petrole focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jaune"
-              aria-label="Facebook (nouvel onglet)"
-            >
-              <Facebook className="size-5" aria-hidden="true" />
             </a>
           </div>
         </div>

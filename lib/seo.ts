@@ -116,7 +116,7 @@ export function localBusinessJsonLd() {
         closes: '23:59',
       },
     ],
-    sameAs: [site.reseaux.instagram, site.reseaux.facebook].filter(Boolean),
+    sameAs: [site.reseaux.instagram].filter(Boolean),
     knowsAbout: [
       'Bistrot associatif et solidaire',
       'Lutte locale contre le cancer',

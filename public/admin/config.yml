@@ -165,7 +165,6 @@ collections:
             fields:
               - { name: "instagram", label: "URL Instagram", widget: "string" }
               - { name: "instagramHandle", label: "Pseudo Instagram", widget: "string" }
-              - { name: "facebook", label: "URL Facebook", widget: "string" }
 
       # CHIFFRES D'IMPACT
       - name: "chiffres"

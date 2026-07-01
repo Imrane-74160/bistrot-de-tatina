@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { MapPin, Clock, Phone, Mail, Navigation, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Clock, Phone, Mail, Navigation, Instagram } from 'lucide-react';
 import { PageHero } from '@/components/PageHero';
 import { Section } from '@/components/Section';
 import { Button } from '@/components/Button';
@@ -123,15 +123,6 @@ export default function ContactPage() {
                 aria-label="Instagram (nouvel onglet)"
               >
                 <Instagram className="size-5" aria-hidden="true" />
-              </a>
-              <a
-                href={site.reseaux.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-petrole/5 text-petrole transition-colors hover:bg-terracotta hover:text-creme focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
-                aria-label="Facebook (nouvel onglet)"
-              >
-                <Facebook className="size-5" aria-hidden="true" />
               </a>
             </div>
 

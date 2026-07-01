@@ -160,7 +160,7 @@ Le plus simple : [Vercel](https://vercel.com) (gratuit).
 
 - Horaires définitifs · chiffres d'impact réels (par année).
 - Noms réels des bénéficiaires & partenaires (+ logos).
-- URLs Instagram / Facebook.
+- URL Instagram.
 - Carte & prix définitifs.
 - Mentions légales : numéro RNA, SIRET, hébergeur, durées de conservation RGPD.
 - Coordonnées GPS exactes (pour la carte).
