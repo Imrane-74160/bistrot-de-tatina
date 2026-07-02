@@ -41,7 +41,7 @@ export function Hero() {
           ref={stageRef}
           onMouseMove={onMove}
           onMouseLeave={onLeave}
-          className="relative overflow-hidden rounded-card shadow-overlap"
+          className="hero-3d relative overflow-hidden rounded-card shadow-overlap"
         >
           {/* Photo immersive — hauteur calée sur l'écran sur desktop (jamais coupée) */}
           <div className="relative aspect-[4/5] w-full sm:aspect-[16/10] lg:aspect-auto lg:h-[calc(100svh-9rem)] lg:max-h-[760px] lg:min-h-[520px]">

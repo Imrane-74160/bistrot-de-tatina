@@ -76,7 +76,7 @@ export function PageHero({
             ref={stageRef}
             onMouseMove={onMove}
             onMouseLeave={onLeave}
-            className="relative overflow-hidden rounded-card shadow-overlap"
+            className="hero-3d relative overflow-hidden rounded-card shadow-overlap"
           >
             {/* Image de fond : couvre toute la carte (la hauteur est imposée par
                 le contenu, pas par un ratio fixe → padding haut/bas constant) */}

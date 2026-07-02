@@ -6,7 +6,7 @@ import { SectionHeading } from '@/components/SectionHeading';
 import { EventCard } from '@/components/events/EventCard';
 import { JsonLd } from '@/components/JsonLd';
 import { AdhesionCta } from '@/components/AdhesionCta';
-import { FloatingSparks } from '@/components/decor/FloatingSparks';
+import { BeerBubbles } from '@/components/decor/BeerBubbles';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { getUpcomingEvents, getPastEvents } from '@/lib/events';
 
@@ -70,7 +70,7 @@ export default function EvenementsPage() {
 
       {past.length > 0 && (
         <Section tone="petrole" spacing="lg" className="isolate">
-          <FloatingSparks />
+          <BeerBubbles />
           <SectionHeading
             eyebrow="C'était au bistrot"
             title="Événements passés"

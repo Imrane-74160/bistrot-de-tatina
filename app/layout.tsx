@@ -6,6 +6,8 @@ import { StickyCallButton } from '@/components/layout/StickyCallButton';
 import { BackToTop } from '@/components/BackToTop';
 import { SmoothScroll } from '@/components/SmoothScroll';
 import { ScrollProgress } from '@/components/ScrollProgress';
+import { PageTransition } from '@/components/PageTransition';
+import { CursorGlow } from '@/components/CursorGlow';
 import { localBusinessJsonLd } from '@/lib/seo';
 import { site, SITE_URL } from '@/lib/site';
 import './globals.css';
@@ -82,6 +84,8 @@ export default function RootLayout({
         </a>
         <SmoothScroll />
         <ScrollProgress />
+        <PageTransition />
+        <CursorGlow />
         <Header />
         <main id="contenu">{children}</main>
         <Footer />

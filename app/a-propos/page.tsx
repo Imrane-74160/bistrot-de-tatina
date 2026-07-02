@@ -11,7 +11,7 @@ import { Partners } from '@/components/home/Partners';
 import { Reveal } from '@/components/Reveal';
 import { JsonLd } from '@/components/JsonLd';
 import { StringLights } from '@/components/decor/StringLights';
-import { FloatingSparks } from '@/components/decor/FloatingSparks';
+import { BeerBubbles } from '@/components/decor/BeerBubbles';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { chiffresContent } from '@/lib/content';
 
@@ -156,6 +156,7 @@ export default function AProposPage() {
             <li key={annee.annee} className="h-full">
               <Reveal
                 delay={i * 110}
+                variant="tilt"
                 className="flex h-full flex-col gap-3 rounded-card border border-petrole/12 bg-petrole/[0.03] p-6 transition-transform duration-200 hover:-translate-y-1"
               >
                 <span className="font-display text-5xl text-terracotta">
@@ -177,7 +178,7 @@ export default function AProposPage() {
 
       {/* Pourquoi adhérer */}
       <Section tone="petrole" spacing="lg" className="isolate">
-        <FloatingSparks />
+        <BeerBubbles />
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col gap-5">
             <SectionHeading

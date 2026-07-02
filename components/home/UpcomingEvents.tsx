@@ -37,7 +37,12 @@ export function UpcomingEvents() {
         {events.length > 0 ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {events.map((event, i) => (
-              <Reveal key={event.slug} delay={i * 110} className="h-full">
+              <Reveal
+                key={event.slug}
+                delay={i * 110}
+                variant="tilt"
+                className="h-full"
+              >
                 <EventCard event={event} />
               </Reveal>
             ))}

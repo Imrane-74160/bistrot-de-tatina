@@ -208,6 +208,10 @@ html {
 .reveal[data-variant='fade'] {
   transform: none;
 }
+.reveal[data-variant='tilt'] {
+  transform: perspective(900px) rotateX(14deg) translateY(30px);
+  transform-origin: center bottom;
+}
 /* Spécificité égale aux variantes ci-dessus (et placée après) pour bien
    neutraliser le transform une fois révélé — sinon le décalage persiste. */
 .reveal--in[data-variant] {
@@ -415,6 +419,95 @@ html.lenis body {
   }
   .hero-sheen {
     display: none !important;
+  }
+}
+
+/* ── Rideau de transition entre pages (le « store » se baisse puis remonte) ──── */
+.tatina-curtain {
+  transform: translateY(-103%);
+}
+.tatina-curtain[data-phase='cover'] {
+  transform: translateY(0);
+  transition: transform 0.42s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.tatina-curtain[data-phase='reveal'] {
+  transform: translateY(-103%);
+  transition: transform 0.55s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.tatina-curtain-logo {
+  animation: tatina-pop 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes tatina-pop {
+  from {
+    transform: scale(0.6) rotate(-8deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* ── Grand bandeau défilant (mots + icônes) ─────────────────────────────────── */
+.tatina-marquee-band {
+  display: flex;
+  width: max-content;
+  animation: tatina-marquee 30s linear infinite;
+  will-change: transform;
+}
+.tatina-marquee-hover:hover .tatina-marquee-band {
+  animation-play-state: paused;
+}
+
+/* ── Bulles de bière qui montent (sections sombres) ─────────────────────────── */
+.tatina-bubble {
+  position: absolute;
+  bottom: -24px;
+  border-radius: 9999px;
+  background: rgba(244, 239, 225, 0.1);
+  border: 1px solid rgba(244, 239, 225, 0.35);
+  opacity: 0;
+  animation: tatina-bubble var(--dur, 10s) linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+@keyframes tatina-bubble {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.75);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  60% {
+    transform: translate3d(var(--sway, 14px), -300px, 0) scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(calc(var(--sway, 14px) * -0.6), -600px, 0) scale(1.05);
+    opacity: 0;
+  }
+}
+
+/* ── Hero : léger relief 3D du cadre qui suit le curseur ────────────────────── */
+.hero-3d {
+  transform: perspective(1200px) rotateX(calc(var(--py, 0) * -1.4deg))
+    rotateY(calc(var(--px, 0) * 1.4deg));
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tatina-curtain {
+    display: none !important;
+  }
+  .tatina-bubble {
+    display: none !important;
+  }
+  .tatina-marquee-band {
+    animation: none !important;
+  }
+  .hero-3d {
+    transform: none !important;
+    transition: none !important;
   }
 }
 

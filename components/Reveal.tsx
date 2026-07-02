@@ -8,8 +8,8 @@ type RevealProps = {
   className?: string;
   /** Décalage d'apparition en ms (pour effet « stagger »). */
   delay?: number;
-  /** Animation : remontée (défaut), zoom doux, ou fondu simple. */
-  variant?: 'up' | 'zoom' | 'fade';
+  /** Animation : remontée (défaut), zoom doux, fondu simple, ou bascule 3D. */
+  variant?: 'up' | 'zoom' | 'fade' | 'tilt';
 };
 
 /**
@@ -17,7 +17,12 @@ type RevealProps = {
  * (IntersectionObserver). Respecte `prefers-reduced-motion` et reste visible
  * sans JavaScript (cf. <noscript> dans le layout).
  */
-export function Reveal({ children, className, delay = 0, variant = 'up' }: RevealProps) {
+export function Reveal({
+  children,
+  className,
+  delay = 0,
+  variant = 'up',
+}: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
 
